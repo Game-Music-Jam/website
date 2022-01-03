@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Berklee Esports</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <script>
+            function show() {
+                document.getElementById("jam1").style.visibility = "visible";
+                document.getElementById("jam2").style.visibility = "visible";
+            }
+            var md = new MobileDetect(window.navigator.userAgent);
+            if (md.mobile() || md.tablet()) {
+                document.location.href = 'mobile-home.html';
+            }
+        </script>
+        <!-- Navigation-->
+        <style>
+            .visi {
+                visibility: hidden;
+            }
+        </style>
+        <script src="mobile-detect.js"></script>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"  style="background-color: #7D4D8F">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" id="visiclick" onclick="show()" href="#!">Events</a></li>
+                        <li class="nav-item"><a class="nav-link visi" id="jam1" href="#!">Jam '20</a></li>
+                        <li class="nav-item"><a class="nav-link visi" id="jam2" href="#!">Jam '21</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead" style="background-image: url(assets/img/event1.jpg);">
+            <div class="container">
+                <br>
+                <div class="masthead-heading text-uppercase"><img  style="height: 170px"src="assets/img/gmjam.png.png"></div>
+                <br>
+                <br>
+                <br>
+            </div>
+        </header>
+        <section class="page-section bg-light" id="team" style="text-align: center">
+            <div class="container ">
+                <div class="row align-items-center">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                        <h3>
+                            The G/M Jam '21 Fundraiser Award
+                        </h3>
+                        <h5>
+                            Team 18: Return of the Cats
+                        </h5>
+                        <img src="assets/img/gm20/18frame.png" style="max-height: 200px; min-height: 250px;" alt="...">
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+                <br> <br>
+                <div class="row">
+                    <div class="col-sm">
+                        <h3>
+                            Best Narrative
+                        </h3>
+                        <h5>
+                            Team 2: An Island Apart
+                        </h5>
+                    </div>
+                    <div class="col-sm">
+                        <div class="col-sm">
+                            <h3>
+                                Best Artwork
+                            </h3>
+                            <h5>
+                                Team 18: Return of the Cats
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="col-sm">
+                            <h3>
+                                Best Thematic Interpretation
+                            </h3>
+                            <h5>
+                                Team 15: Spiritus
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <img src="assets/img/gm20/2frame.png" style="max-height: 200px; min-height: 250px;" alt="...">
+                    </div>
+                    <div class="col-sm">
+                        <div class="col-sm">
+                            <img src="assets/img/gm20/18frame.png" style="max-height: 200px; min-height: 250px;" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="col-sm">
+                            <img src="assets/img/gm20/15frame.png" style="max-height: 200px; min-height: 250px;" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

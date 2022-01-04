@@ -15,100 +15,42 @@
         <link href="css/styles.css" rel="stylesheet" />
 
     </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <style>
-            /* Popup container */
-           .popup {
-           position: relative;
-           display: inline-block;
-           cursor: pointer;
-           }
-
-           /* The actual popup (appears on top) */
-           .popup .popuptext {
-           visibility: hidden;
-           width: 160px;
-           background-color: #555;
-           color: #fff;
-           text-align: center;
-           border-radius: 6px;
-           padding: 8px 0;
-           position: absolute;
-           z-index: 1;
-           top: 125%;
-           left: 50%;
-           margin-left: -80px;
-           }
-
-           /* Popup arrow */
-           .popup .popuptext::after {
-           content: "";
-           position: absolute;
-           bottom: 100%;
-           left: 50%;
-           margin-left: -5px;
-           border-width: 5px;
-           border-style: solid;
-           border-color: #555 transparent transparent transparent;
-           }
-
-           /* Toggle this class when clicking on the popup container (hide and show the popup) */
-           .popup .show {
-           visibility: visible;
-           -webkit-animation: fadeIn 1s;
-           animation: fadeIn 1s
-           }
-
-           /* Add animation (fade in the popup) */
-           @-webkit-keyframes fadeIn {
-           from {opacity: 0;}
-           to {opacity: 1;}
-           }
-
-           @keyframes fadeIn {
-           from {opacity: 0;}
-           to {opacity:1 ;}
-           } 
-         </style>
-         <script>
-            function myFunction() {
-              var popup = document.getElementById("myPopup");
-              popup.classList.toggle("show");
+    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat;">
+        <script>
+            function show() {
+                document.getElementById("jam1").style.visibility = "visible";
+                document.getElementById("jam2").style.visibility = "visible";
+            }
+            var md = new MobileDetect(window.navigator.userAgent);
+            if (md.mobile() || md.tablet()) {
+                document.location.href = 'mobile-home.html';
             }
         </script>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <!-- Navigation-->
+        <style>
+            .visi {
+                visibility: hidden;
+            }
+         </style>
+         <script src="mobile-detect.js"></script>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"  style="background-color: #7D4D8F">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img style="min-height: 80px"src="assets/img/bsports.png" alt="..." /></a>      
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <ul class="navbar-nav text-uppercase">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <div class="popup" onmouseover="myFunction()">
-                            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>   
-                            <span class="popup popuptext" id="myPopup">  
-                                <ul class=" popup dropdown-menu dropdown-menu-dark dropdown-menu-macos mx-0 border-0 shadow" style="width: 220px;">
-                                    <li><a class="dropdown-item active" href="events.html">Calendar</a></li>
-                                    <li><a class="dropdown-item" href="#">G/M Jam</a></li>
-                                </ul>
-                            </span>
-                        </div>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" id="visiclick" onclick="show()" href="#!">Events</a></li>
+                        <li class="nav-item"><a class="nav-link visi" id="jam1" href="#!">Jam '20</a></li>
+                        <li class="nav-item"><a class="nav-link visi" id="jam2" href="#!">Jam '21</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background-image: url(assets/img/event1.jpg);">
+        <header class="masthead" style="background-image: url(assets/img/gmjamcover.jpg);">
             <div class="container">
                 <br>
-                <div class="masthead-heading text-uppercase"><img  style="height: 170px"src="assets/img/BETextWhiteTransparent.png"></div>
+                <div class="masthead-heading text-uppercase"><img  style="height: 270px"src="assets/img/gmjam.png"></div>
                 <br>
                 <br>
                 <br>
@@ -125,177 +67,120 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/marc.jpg" alt="..." />
                             <h4>Marc Yu</h4>
-                            <p class="text-muted">Co-President</p>
+                            <p class="text-muted">Organizer</p>
                         </div>
                     </div>
                     <div class="col">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/josh.jpg" alt="..." />
-                            <h4>Josh Trochet</h4>
-                            <p class="text-muted">Co-President</p>
+                            <img class="mx-auto rounded-circle" src="assets/img/arjan.jpg" alt="..." />
+                            <h4>Arjan Dogra</h4>
+                            <p class="text-muted">Organizer</p>
                         </div>
                     </div>
                 
                     <div class="col">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/cason.jpg" alt="..." />
-                            <h4>Cason Joyner</h4>
-                            <p class="text-muted">Co-Vice President</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/colton.jpg" alt="..." />
-                            <h4>Colton Slaven</h4>
-                            <p class="text-muted">Co-Vice President</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="row justify-content-center ">
-                    <div class="col">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/cj.jpg" alt="..." />
-                            <h4>CJ Wolf</h4>
-                            <p class="text-muted">Secretary</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/christian.jpeg" alt="..." />
-                            <h4>Christian Cop</h4>
-                            <p class="text-muted">Treasurer & Event Coordinator</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/izzi.jpg" alt="..." />
                             <h4>Izzi Guzman</h4>
-                            <p class="text-muted">Social Media & Outreach Manager</p>
+                            <p class="text-muted">Organizer</p>
                         </div>
                     </div>
                 </div>
-                <hr>
-                <br>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h4>
-                                Joon Kim
-                            </h4>
-                            <p>Team Manager, League of Legends</p>
-                        </div>
-                        <div class="col">
-                            <h4>
-                                Chandler Beaugrand 
-                            </h4>
-                            <p>Team Manage, League of Legends</p>
-                        </div>
-                        <div class="col">
-                            <h4>
-                                Mark Hacz
-                            </h4>
-                            <p>Team Manager, Valorant</p>
-                        </div>
-                    </div> 
-                    <br>
-                <br>
-                    <div class="row">
-                        <div class="col-4">
-                            <h4>
-                                Gabe Bumagat
-                            </h4>
-                            <p>Team Manager, Team Fortress 2</p>
-                        </div>
-                        <div class="col-4">
-                            <h4>
-                                Tommy Keane
-                            </h4>
-                            <p>Team Manager, Apex Legends</p>
+                <div class="row justify-content-center ">
+                    <div class="col">
+                        <div class="team-member">
+                            <!-- <img class="mx-auto rounded-circle" src="assets/img/isham.jpg" alt="..." /> -->
+                            <!-- <h4>Isham Behl</h4> -->
+                            <p class="text-muted"> </p>
                         </div>
                     </div>
-                    <br>
-                <br>
-                    <div class="row" >
-                        <div class="col">
-                            <h4  style="margin:.1rem">
-                                Alwaleed Alshoura
-                            </h4>
-                            <p>Tournament Organizer</p>
-                        </div>
-                        <div class="col">
-                            <h4>
-                                Dominic Wright
-                            </h4>
-                            <p>Tournament Organizer</p>
-                        </div>
-                        <div class="col">
-                            <h4>
-                                EJ Service
-                            </h4>
-                            <p>Tournament Organizer</p>
+                    <div class="col">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/isham.jpg" alt="..." />
+                            <h4>Isham Behl</h4>
+                            <p class="text-muted">Co-Vice President</p>
                         </div>
                     </div>
-                    <br>
-                <br>
-                    <div class="row">
+                        
                         <div class="col">
-                            <h4>
-                                Andrea Abellera
-                            </h4>
-                            <p>G/M Jam OPs</p>
+                            <div class="team-member">
+                                <img class="mx-auto rounded-circle" src="assets/img/joon.jpg" alt="..." />
+                                <h4>Joon Kim</h4>
+                                <p class="text-muted">Treasurer & Event Coordinator</p>
+                            </div>
                         </div>
                         <div class="col">
-                            <h4>
-                                Kunal Rajpal
-                            </h4>
-                            <p>G/M Jam OPs</p>
+                            <div class="team-member">
+                                <!-- <img class="mx-auto rounded-circle" src="assets/img/isham.jpg" alt="..." /> -->
+                                <!-- <h4>Isham Behl</h4> -->
+                                <p class="text-muted"> </p>
+                            </div>
                         </div>
-                        <div class="col">
-                            <h4>
-                                Arjan Singh
-                            </h4>
-                            <p>G/M Jam OPs</p>
+                </div>
+                <div class="row justify-content-center ">
+                    <div class="col">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/lyka.jpg" alt="..." />
+                            <h4>Lyka Sal-Long</h4>
+                            <p class="text-muted">Admin</p>
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <h4>
-                                Annie Wagner
-                            </h4>
-                            <p>Minecraft Server OPs</p>
-                        </div>
-                        <div class="col">
-                            <h4>
-                                Andy Lin
-                            </h4>
-                            <p>Minecraft Server OPs</p>
-                        </div>
-                        <div class="col">
-                            <h4>
-                                Daniel Mandel
-                            </h4>
-                            <p>D&D OPs</p>
+                    <div class="col">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/andrea.jpg" alt="..." />
+                            <h4>Andrea Abellera</h4>
+                            <p class="text-muted">Admin</p>
                         </div>
                     </div>
-                    <br>
-                <br>
-                    <div class="row">
-                        <div class="col-4">
-                            <h4>
-                                Isham Behl
-                            </h4>
-                            <p>Web Developer</p>
+                    <div class="col">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/miles.jpg" alt="..." />
+                            <h4>Miles Acquaviva</h4>
+                            <p class="text-muted">Admin</p>
                         </div>
-                        <div class="col-4">
-                            <h4>
-                                Miles Acquaviva
-                            </h4>
-                            <p>Web Developer</p>
+                    </div>
+                    <div class="col">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/sean.jpg" alt="..." />
+                            <h4>Sean Morrow</h4>
+                            <p class="text-muted">Admin</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <footer style="background-color:#30373E; position: fixed; bottom: 0; width: 100%;"class="footer py-4" >
+            <div style="margin: auto"class="container">
+                <div class="row align-items-center">
+                    <div style="color:white"class="col text-lg-start">Game/Music Jam</div>
+                    <div style="color:white"class="col text-lg-start"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8TVlDEpnDpA0Nyv7QiXe1AuymMtfNPMatJOZ9QyQtO9qWQ/viewform?usp=sf_link"><u>Report bugs here!</u></a></div>
+                    
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://discord.gg/CMgh39fg">
+                                    <img class="nav-item"  style="max-height:30px" src="assets/discordlogo.png">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="https://www.facebook.com/berkleeesports">
+                                    <img style="max-height:30px" src="assets/itchgmjam.png">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="https://twitter.com/GameMusicJam">
+                                    <img style="max-height:30px" src="assets/twitterlogo.png">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="https://www.instagram.com/gamemusicjam/">
+                                    <img style="max-height:30px" src="assets/instagramlogo.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

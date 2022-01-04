@@ -56,7 +56,61 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <br><br>
+        <!-- <br><br> -->
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("September 1, 2022 12:00:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get today's date and time
+              var now = new Date().getTime();
+                
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+                
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+              // Output the result in an element with id="demo"
+              document.getElementById("demo").innerHTML = days + ":" + hours + ":"
+              + minutes + ":" + seconds;
+                
+              // If the count down is over, write some text 
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+            }, 1000);
+            </script>
+        <header class="masthead" style="background-image: url(assets/img/gmjamcover.jpg); padding-bottom:150px;">
+            <div class="container">
+                <img style="height: 240px; padding: 20px"src="assets/img/gmjam.png">
+                <div style="font-family: Impact; font-size:30pt; padding: 1px">
+                    GAME/MUSIC JAM 2022 <br>
+                    <div style="font-family: Verdana; font-size:20pt; padding:10pt">
+                        Registration starts in:
+                    </div>
+                </div>
+                <!-- <br> -->
+                <!-- <p style="font-family: Verdana; padding: 3px">November 4 - December 4</p> -->
+                <div style="font-family: Verdana; -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                border-radius: 15px; background-color: white; max-width: 380px; margin: auto">
+                    <!-- <a href="https://tinyurl.com/GMJ21Showcase"> -->
+                        <div style="color: black; padding: 10px;">
+                            <b><div style="font-size: 35pt" id="demo"></div></b>
+                            <div>&nbsp;&nbsp;days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;&nbsp;&nbsp;&nbsp;seconds</div>
+                        </div>
+                    <!-- </a> -->
+                </div>
+                <!-- <br> -->
+            </div>
+        </header>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -95,30 +149,10 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <header class="masthead">
-            
-            <!-- <div class="container"  style="padding-top: 5%;"> -->
-                
-                <!-- <div class="row">
-                    <div class="col">
-                       <div class="masthead-heading text-uppercase"><br>Game/Music Jam</div>-->
-                        <!-- <img style="max-height:250px" src="assets/img/gmjam.png"> -->
-                        <!-- <div class="position:relative">
-                            <div style="z-index:1; width:100%;height:50%"></div>
-                            <div class="masthead-subheading" style="font-size:10pt; z-index:2;">
-                                GM Jam is a game jam for students around the world seeking to advance their careers by meeting likeminded creators <br>and developing new games. Keep an eye on this page for more information about our next game jam in the fall.
-                            </div><br><br>
-                        </div>
-                    </div>
-                    <div class="col col-lg-3">
-                        <br> <br> <br> -->
-                        
-                <!-- </div> -->
-            <!-- </div> -->
-            <br>
-        </header>
+        <br><br>
+        <br>
         <!-- Footer-->
-        <footer style="background-color:#30373E; position: fixed; bottom: 0; width: 100%;"class="footer py-4" >
+        <footer style="background-color:#30373E; position: fixed; bottom: 0; width: 100%; z-index: 100000"class="footer py-4" >
             <div style="margin: auto"class="container">
                 <div class="row align-items-center">
                     <div style="color:white"class="col text-lg-start">Game/Music Jam</div>

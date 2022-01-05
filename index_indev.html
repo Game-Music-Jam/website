@@ -75,6 +75,14 @@
               var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
               var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
               var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              if ((seconds / 10) < 1) {
+                  seconds = "0" + String(seconds);
+              } else if ((minutes / 10) < 1) {
+                seconds = "0" + String(minutes);
+              } else if ((hours / 10) < 1) {
+                seconds = "0" + String(hours);
+              }
                 
               // Output the result in an element with id="demo"
               document.getElementById("demo").innerHTML = days + ":" + hours + ":"
@@ -104,7 +112,7 @@
                     <!-- <a href="https://tinyurl.com/GMJ21Showcase"> -->
                         <div style="color: black; padding: 10px;">
                             <b><div style="font-size: 35pt" id="demo"></div></b>
-                            <div>&nbsp;&nbsp;days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;&nbsp;&nbsp;&nbsp;seconds</div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;&nbsp;&nbsp;&nbsp;seconds</div>
                         </div>
                     <!-- </a> -->
                 </div>

@@ -7933,6 +7933,7 @@ textarea.form-control-lg {
 
 .rounded-circle {
   border-radius: 50% !important;
+  background-color:#7D4D8F;
 }
 
 .rounded-pill {

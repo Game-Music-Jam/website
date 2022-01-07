@@ -26,7 +26,8 @@
         <script>
             //B722B2DF3D9D1CC7C19BBC81D410AD65D9FF
             function sendMail() {
-                var email = document.getElementById("exampleFormControlInput1").value;
+                var name = document.getElementById("exampleFormControlInput1").value;
+                var email = document.getElementById("exampleFormControlInput2").value;
                 console.log(email);
                 var message = document.getElementById("exampleFormControlTextarea1").value;
                 Email.send({
@@ -35,8 +36,8 @@
                     Password : "B722B2DF3D9D1CC7C19BBC81D410AD65D9FF",
                     To : 'admin@gamemusicjam.org',
                     From : "acqmiles@gmail.com",
-                    Subject : "aaaaa",
-                    Body : "FROM: " + email + " MESSAGE: " + message
+                    Subject : "GM JAM CONTACT FORM",
+                    Body : "FROM: " + name + " " + email + " MESSAGE: " + message
                 }).then(
                   message => alert(message)
                 );
@@ -129,14 +130,15 @@
         <header class="masthead">
             <div class="container">
                 <img style="height: 270px; padding: 20px; padding: 10px"src="assets/img/gmjam.png">
-                <div style="font-family: Verdana; -webkit-border-radius: 15px;
+                <!-- <div style="font-family: Verdana; -webkit-border-radius: 15px;
                 -moz-border-radius: 15px;
-                border-radius: 15px; background-color: white; max-width: 500px; margin: auto">
-                        <div style="color: black; padding: 10px;">
-                            <h4>GAME/MUSIC JAM <a href = "mailto: admin@gamemusicjam.org"><br>admin@gamemusicjam.org</a>
-                                <br>Discord: <a href="https://tinyurl.com/BerkleeEsportsDiscord">Game Jam Discord</a></h4>
+                border-radius: 15px; background-color: white; max-width: 500px; margin: auto"> -->
+                        <div style="color: black; padding: 10px; font-family: Verdana; color:white">
+                            <h1>CONTACT US</h1>
+                            <!-- <h4>GAME/MUSIC JAM <a href = "mailto: admin@gamemusicjam.org"><br>admin@gamemusicjam.org</a>
+                                <br>Discord: <a href="https://tinyurl.com/BerkleeEsportsDiscord">Game Jam Discord</a></h4> -->
                         </div>
-                </div>
+                <!-- </div> -->
                 <br>
                 <br>
             </div>
@@ -145,16 +147,26 @@
             <div class="row">
                 <div class="col-sm"></div>
                 <div class="col">
-                    <form style="background-color: white; -webkit-border-radius: 15px;
-                    -moz-border-radius: 15px;
-                    border-radius: 15px; padding: 10px; max-width: 500px; margin: auto">
-                        <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <form style="max-width: 500px; margin: auto">
+                        <div class="container" style="padding: 0px;">
+                            <div class="row">
+                                <div class="col" style="min-width: 50%;">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1"></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Full Name">
+                                    </div>
+                                </div>
+                                <div class="col" style="min-width: 50%;">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1"></label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Email Address">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="exampleFormControlTextarea1"></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
                         </div>
                     </form>
                     <br>

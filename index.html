@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <script src="js/main.js"></script>
         <title>GM Jam</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -24,12 +25,23 @@
         <!-- <link href="css/sticky-footer.css" rel="stylesheet"> -->
     </head>
     <!-- style="background-color:#30373E" -->
+    <style>
+        .visi {
+            visibility: hidden;
+        }
+        .twvisi {
+            visibility: hidden;
+        }
+        h2 {
+            font-size: 35;
+            font-family: Impact;
+        }
+        .dropdown-menu {
+            margin: .5rem auto;
+        }
+     </style>
     <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat;">
         <script>
-            function show() {
-                document.getElementById("jam1").style.visibility = "visible";
-                document.getElementById("jam2").style.visibility = "visible";
-            }
             var md = new MobileDetect(window.navigator.userAgent);
             if (md.mobile() || md.tablet()) {
                 document.location.href = 'mobile-home.html';

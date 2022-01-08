@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
+        <script src="js/main.js"></script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Game Music Jam</title>
@@ -15,13 +16,24 @@
         <link href="css/styles.css" rel="stylesheet" />
 
     </head>
+    <style>
+        .visi {
+            visibility: hidden;
+        }
+        .twvisi {
+            visibility: hidden;
+        }
+        h2 {
+            font-size: 35;
+            font-family: Impact;
+        }
+        .dropdown-menu {
+            margin: .5rem auto;
+        }
+     </style>
     <body id="page-top">
         <!-- Navigation-->
         <script>
-            function show() {
-                document.getElementById("jam1").style.visibility = "visible";
-                document.getElementById("jam2").style.visibility = "visible";
-            }
             var md = new MobileDetect(window.navigator.userAgent);
             if (md.mobile() || md.tablet()) {
                 document.location.href = 'mobile-home.html';
@@ -37,17 +49,35 @@
             }
         </style>
         <script src="mobile-detect.js"></script>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" id="mainNav"  style="background-color: #7D4D8F;filter: drop-shadow(0 0 0.75rem black);">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Game/Music Jam</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" id="visiclick" onclick="show()" href="#!">Events</a></li>
-                        <li class="nav-item"><a class="nav-link visi" id="jam1" href="gm20.html">Jam '20</a></li>
-                        <li class="nav-item"><a class="nav-link visi" id="jam2" href="gm21.html">Jam '21</a></li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top py-2" id="mainNav"  style="background-color: #7D4D8F;filter: drop-shadow(0 0 0.75rem black);">
+            <div class="container-fluid">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item ms-auto" ><a class="nav-link" href="index.html">Game/Music&nbsp;Jam</a></li>
+                    <span style="padding-left: 100%; padding-right: 90%;"></span>
+                    <div class="row">
+                        <div class="dropdown" style="font-family: Montserrat; color:white; ">
+                            <div class="dropdown"> 
+                                <a style="color:white; font-size: .95rem; margin-right:auto"class="nav-link dropdown-toggle" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+                                    <div class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1">
+                                    <a class="dropdown-item" onClick="showUpcoming()" href="#">Upcoming Events</a>
+                                    <a class="dropdown-item" onClick="show2022()" href="#">2022</a>
+                                    <a class="dropdown-item" onClick="show2021()" href="#">2021</a>
+                                    <a class="dropdown-item" onClick="show2020()" href="#">2020</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px">
+                            <div class="dropdown" style="padding-left: 90px; padding-top: 39px; max-width: 0px;">
+                                <div class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
+                                    <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu1"></a>
+                                    <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu2"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="nav-item" style="z-index: 1000;"><a class="nav-link" href="about.html">About</a></li>
+                    <li style="padding-right:5px;" class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </nav>
         <!-- Masthead-->

@@ -23,57 +23,6 @@
 
     </head>
     <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat;">
-        <script>
-            //B722B2DF3D9D1CC7C19BBC81D410AD65D9FF
-            function sendMail() {
-                var name = document.getElementById("exampleFormControlInput1").value;
-                var email = document.getElementById("exampleFormControlInput2").value;
-                console.log(email);
-                var message = document.getElementById("exampleFormControlTextarea1").value;
-                Email.send({
-                    Host : "smtp.elasticemail.com",
-                    Username : "acqmiles@gmail.com",
-                    Password : "B722B2DF3D9D1CC7C19BBC81D410AD65D9FF",
-                    To : 'admin@gamemusicjam.org',
-                    From : "acqmiles@gmail.com",
-                    Subject : "GM JAM CONTACT FORM",
-                    Body : "FROM: " + name + " " + email + " MESSAGE: " + message
-                }).then(
-                  message => alert(message)
-                );
-
-            }
-            function show() {
-                if (document.getElementById("jam1").style.visibility == "visible") {
-                    document.getElementById("jam1").style.visibility = "hidden";
-                    document.getElementById("newMenu").style.visibility = "hidden";
-                } else {
-                    document.getElementById("jam1").style.visibility = "visible";
-                }
-            }
-            function show2020() {
-                document.getElementById("newMenu").style.visibility = "visible";
-                document.getElementById("menu1").textContent = "GM Jam '20";
-                document.getElementById("menu1").href = "gm20.html";
-                document.getElementById("menu2").style.padding = "0px"
-            }
-            function show2021() {
-                document.getElementById("newMenu").style.visibility = "visible";
-                document.getElementById("menu1").textContent = "GM Jam '21";
-                document.getElementById("menu1").href = "gm21.html";
-                document.getElementById("menu2").style.padding = "0px"
-            }
-            function show2022() {
-                document.getElementById("newMenu").style.visibility = "hidden";
-            }
-            function showUpcoming() {
-                document.getElementById("newMenu").style.visibility = "hidden";
-            }
-            var md = new MobileDetect(window.navigator.userAgent);
-            if (md.mobile() || md.tablet()) {
-                document.location.href = 'mobile-home.html';
-            }
-        </script>
         <!-- Navigation-->
         <style>
             .visi {
@@ -90,88 +39,101 @@
                 margin: .5rem auto;
             }
          </style>
-         <!-- marc,joon,isham,arjan,izzi -->
          <script src="mobile-detect.js"></script>
-         <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" id="mainNav"  style="background-color: #7D4D8F;filter: drop-shadow(0 0 0.75rem black);">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Game/Music&nbsp;Jam</a></li>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col dropdown" style="font-family: Montserrat; color:white; ">
-                                    <div class="dropdown">
-                                        <a style="color:white; font-size: .95rem"class="nav-link dropdown-toggle" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
-                                        <div class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1">
-                                            <a class="dropdown-item" onClick="showUpcoming()" href="#">Upcoming Events</a>
-                                            <a class="dropdown-item" onClick="show2022()" href="#">2022</a>
-                                            <a class="dropdown-item" onClick="show2021()" href="#">2021</a>
-                                            <a class="dropdown-item" onClick="show2020()" href="#">2020</a>
-                                        </div>
-                                    </div>
+         <!-- <nav class="navbar navbar-expand-sm navbar-dark fixed-top py-2" id="mainNav"  style="background-color: #7D4D8F;filter: drop-shadow(0 0 0.75rem black);">
+            <div class="container-fluid ">
+              <a class="navbar-brand " href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Course</a>
+                  </li>			
+                </ul>		  
+              </div>
+            </div>
+          </nav> -->
+         <nav class="navbar navbar-expand-sm navbar-dark fixed-top py-2" id="mainNav"  style="background-color: #7D4D8F;filter: drop-shadow(0 0 0.75rem black);">
+            <div class="container-fluid">
+                <ul class="navbar-nav text-uppercase">
+                    <li class="nav-item ms-auto" ><a class="nav-link" href="index.html">Game/Music&nbsp;Jam</a></li>
+                    <span style="padding-left: 100%; padding-right: 90%;"></span>
+                    <div class="row">
+                        <div class="dropdown" style="font-family: Montserrat; color:white; ">
+                            <div class="dropdown"> 
+                                <a style="color:white; font-size: .95rem; margin-right:auto"class="nav-link dropdown-toggle" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+                                    <div class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1">
+                                    <a class="dropdown-item" onClick="showUpcoming()" href="#">Upcoming Events</a>
+                                    <a class="dropdown-item" onClick="show2022()" href="#">2022</a>
+                                    <a class="dropdown-item" onClick="show2021()" href="#">2021</a>
+                                    <a class="dropdown-item" onClick="show2020()" href="#">2020</a>
                                 </div>
-                                <div class="col dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px">
-                                    <div class="dropdown" style="padding-left: 90px; padding-top: 39px; max-width: 0px;">
-                                        <div class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
-                                            <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu1"></a>
-                                            <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu2"></a>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div> 
+                        <div class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px">
+                            <div class="dropdown" style="padding-left: 90px; padding-top: 39px; max-width: 0px;">
+                                <div class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
+                                    <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu1"></a>
+                                    <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu2"></a>
                                 </div>
                             </div>
                         </div>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+                    </div>
+                    <li class="nav-item" style="z-index: 1000;"><a class="nav-link" href="about.html">About</a></li>
+                    <li style="padding-right:5px;" class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
                 <img style="height: 270px; padding: 20px; padding: 10px"src="assets/img/gmjam.png">
-                <!-- <div style="font-family: Verdana; -webkit-border-radius: 15px;
-                -moz-border-radius: 15px;
-                border-radius: 15px; background-color: white; max-width: 500px; margin: auto"> -->
                         <div style="color: black; padding: 10px; font-family: Verdana; color:white">
                             <h1>CONTACT US</h1>
-                            <!-- <h4>GAME/MUSIC JAM <a href = "mailto: admin@gamemusicjam.org"><br>admin@gamemusicjam.org</a>
-                                <br>Discord: <a href="https://tinyurl.com/BerkleeEsportsDiscord">Game Jam Discord</a></h4> -->
                         </div>
-                <!-- </div> -->
-                <br>
-                <br>
+                <!-- <br> -->
             </div>
         </header>
         <div class="container">
             <div class="row">
                 <div class="col-sm"></div>
                 <div class="col">
-                    <form style="max-width: 500px; margin: auto">
-                        <div class="container" style="padding: 0px;">
+                    <form style="max-width: 500px; margin: auto; font-family: Arial">
+                        <div class="container" style="padding: 0px; ">
                             <div class="row">
                                 <div class="col" style="min-width: 50%;">
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1"></label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Full Name">
+                                        <input style="-moz-border-radius: 0px;
+                                        -webkit-border-radius: 0px; 
+                                        border-radius: 0px; font-style: italic" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Full Name">
                                     </div>
                                 </div>
                                 <div class="col" style="min-width: 50%;">
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1"></label>
-                                        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Email Address">
+                                        <input style="-moz-border-radius: 0px;
+                                        -webkit-border-radius: 0px; 
+                                        border-radius: 0px; font-style: italic" type="email" class="form-control" id="exampleFormControlInput2" placeholder="Email Address">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1"></label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                            <textarea style="-moz-border-radius: 0px;
+                            -webkit-border-radius: 0px; 
+                            border-radius: 0px; font-style: italic  " class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
                         </div>
                     </form>
                     <br>
                     <form method="post" style="text-align: center;">
-                        <input class="btn btn-light" type="button" value="Send Email" 
+                        <input class="btn btn-light" type="button" value="Submit" 
                             onclick="sendMail()"/>
                     </form>
                 </div>

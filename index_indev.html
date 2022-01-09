@@ -52,6 +52,21 @@
             .visi {
                 visibility: hidden;
             }
+            .vertical {
+                border-left: 5px solid rgba(255, 255, 255, .25);
+                height: 90px;
+            }
+            .timediv {
+                max-width: 300px;
+            }
+            .time {
+                padding-top: 0px;
+                margin-bottom: 0px;
+                font-size: 50pt;
+            }
+            p {
+                line-height: 1;
+            }
          </style>
          <script src="mobile-detect.js"></script>
          <nav class="navbar navbar-expand-sm navbar-dark fixed-top py-3" id="mainNav"  style="background-color: #7D4D8F;filter: drop-shadow(0 0 0.75rem black);">
@@ -65,22 +80,22 @@
                     <li class="nav-item">
                         <div class="container">
                             <div class="row">
-                                <div class="dropdown" style="font-family: Montserrat; color:white; ">
+                                <div class="dropdown" style="font-family: Montserrat; color:white;">
                                     <div class="dropdown"> 
                                         <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
-                                            <div class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1">
-                                            <a class="dropdown-item" onClick="showUpcoming()" href="#">Upcoming Events</a>
-                                            <a class="dropdown-item" onClick="show2022()" href="#">2022</a>
-                                            <a class="dropdown-item" onClick="show2021()" href="#">2021</a>
-                                            <a class="dropdown-item" onClick="show2020()" href="#">2020</a>
-                                        </div>
+                                            <div class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1" >
+                                                <a class="dropdown-item" onClick="showUpcoming()" href="#">Upcoming Events</a>
+                                                <a class="dropdown-item" onClick="show2022()" href="#">2022</a>
+                                                <a class="dropdown-item" onClick="show2021()" href="#">2021</a>
+                                                <a class="dropdown-item" onClick="show2020()" href="#">2020</a>
+                                            </div>
                                     </div>
                                 </div> 
-                                <div class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px">
+                                <div class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px; position: relative; right:313px">
                                     <div class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px;">
                                         <div class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
-                                            <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu1"></a>
-                                            <a class="dropdown-item" onClick="showUpcoming()" href="#" id="menu2"></a>
+                                            <a class="dropdown-item" id="menu1"></a>
+                                            <a class="dropdown-item" id="menu2"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -88,10 +103,10 @@
                         </div>
                     </li>
                     <li class="nav-item" style="z-index: 1000;">
-                        <a class="nav-link active" aria-current="page" style="color:white; z-index: 1000;" href="#">About</a>
+                        <a class="nav-link active" aria-current="page" style="color:white; z-index: 1000;" href="about.html">About</a>
                       </li>		
                       <li class="nav-item" style="padding-right: 5px">
-                        <a class="nav-link active" aria-current="page" style="color:white" href="#">Contact</a>
+                        <a class="nav-link active" aria-current="page" style="color:white" href="contact.html">Contact</a>
                       </li>	
                 </ul>		  
               </div>
@@ -121,14 +136,19 @@
               if ((seconds / 10) < 1) {
                   seconds = "0" + String(seconds);
               } else if ((minutes / 10) < 1) {
-                seconds = "0" + String(minutes);
+                minutes = "0" + String(minutes);
               } else if ((hours / 10) < 1) {
-                seconds = "0" + String(hours);
+                hours = "0" + String(hours);
               }
                 
               // Output the result in an element with id="demo"
-              document.getElementById("demo").innerHTML = days + ":" + hours + ":"
-              + minutes + ":" + seconds;
+              //document.getElementById("demo").innerHTML = days + ":" + hours + ":"
+              //+ minutes + ":" + seconds;
+
+              document.getElementById("days").innerHTML = days;
+              document.getElementById("hours").innerHTML = hours;
+              document.getElementById("minutes").innerHTML = minutes;
+              document.getElementById("seconds").innerHTML = seconds;
                 
               // If the count down is over, write some text 
               if (distance < 0) {
@@ -143,21 +163,45 @@
                 <div style="font-family: Impact; font-size:30pt; padding: 1px">
                     GAME/MUSIC JAM 2022 <br>
                     <div style="font-family: Verdana; font-size:20pt; padding:10pt">
-                        Registration starts in:
+                        Registration starts in:<br>
                     </div>
                 </div>
-                <!-- <br> -->
+                <br>
                 <!-- <p style="font-family: Verdana; padding: 3px">November 4 - December 4</p> -->
-                <div style="font-family: Verdana; -webkit-border-radius: 15px;
+                <!-- <div style="font-family: Verdana; -webkit-border-radius: 15px;
                 -moz-border-radius: 15px;
-                border-radius: 15px; background-color: white; max-width: 380px; margin: auto">
+                border-radius: 15px; background-color: white; max-width: 400px; margin: auto"> -->
                     <!-- <a href="https://tinyurl.com/GMJ21Showcase"> -->
-                        <div style="color: black; padding: 10px;">
-                            <b><div style="font-size: 35pt" id="demo"></div></b>
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;&nbsp;&nbsp;&nbsp;seconds</div>
+                        <div style="color: white">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col"></div>
+                                    <div class="col timediv">
+                                        <p id="days" class="time"></p>
+                                        <p>days</p>
+                                    </div>
+                                    <div class="col timediv vertical">
+                                        <p id="hours" class="time"></p>
+                                        <p>hours</p>
+                                    </div>
+                                    <div class="col timediv vertical">
+                                        <p id="minutes" class="time"></p>
+                                        <p>minutes</p>
+                                    </div>
+                                    <div class="col timediv vertical">
+                                        <p id="seconds" class="time"></p>
+                                        <p>seconds</p>
+                                    </div>
+                                    <div class="col">&nbsp;</div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                            <!-- <b><div style="font-size: 35pt" id="demo"></div></b>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;&nbsp;&nbsp;&nbsp;seconds</div> -->
                         </div>
                     <!-- </a> -->
-                </div>
+                <!-- </div> -->
                 <!-- <br> -->
             </div>
         </header>

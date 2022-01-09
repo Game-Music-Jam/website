@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overscroll-behavior-y: none;">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -30,8 +30,15 @@
         .dropdown-menu {
             margin: .5rem auto;
         }
+        .visi {
+            visibility: hidden;
+        }
+        h2 {
+            font-size: 35;
+            font-family: Impact;
+        }
      </style>
-    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat;">
+    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat; ">
         <script>
             var md = new MobileDetect(window.navigator.userAgent);
             if (md.mobile() || md.tablet()) {
@@ -39,16 +46,6 @@
             }
         </script>
         <!-- Navigation-->
-        <style>
-            .visi {
-                visibility: hidden;
-            }
-            h2 {
-                font-size: 35;
-                font-family: Impact;
-            }
-         </style>
-         <!-- marc,joon,isham,arjan,izzi -->
          <script src="mobile-detect.js"></script>
          <nav class="navbar navbar-expand-sm navbar-dark fixed-top py-3" id="mainNav"  style="background-color: #7D4D8F;filter: drop-shadow(0 0 0.75rem black);">
             <div class="container-fluid ">
@@ -72,7 +69,7 @@
                                             </div>
                                     </div>
                                 </div> 
-                                <div class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px; position: relative; right:313px">
+                                <div id="topmenu" class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px; position: relative; right:313px">
                                     <div class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px;">
                                         <div class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
                                             <a class="dropdown-item" id="menu1"></a>
@@ -96,22 +93,7 @@
         <!-- Masthead-->
         <header class="masthead" style="background-image: url(assets/img/gmjamcover.jpg);">
             <div class="container">
-                <img style="height: 270px; padding: 20px"src="assets/img/gmjam.png">
-                <div style="font-family: Impact; font-size:30pt; padding: 1px">
-                    <!-- GAME/MUSIC JAM 2022 -->
-                </div>
-                <!-- <br> -->
-                <!-- <p style="font-family: Verdana; padding: 3px">November 4 - December 4</p> -->
-                <div style="font-family: Verdana; -webkit-border-radius: 15px;
-                -moz-border-radius: 15px;
-                border-radius: 15px; background-color: white; max-width: 300px; margin: auto">
-                    <a href="https://tinyurl.com/GMJ21Showcase">
-                        <div style="color: black; padding: 10px;">
-                            <b>Check out our latest jam!</b>
-                        </div>
-                    </a>
-                </div>
-                <!-- <br> -->
+                <img style="height: 270px; padding: 20px"src="assets/img/gmjam.png" alt="gmjam logo">
                 <br>
                 <br>
             </div>
@@ -201,7 +183,7 @@
                 </div>
             </div>
         </section>
-        <footer style="background-color:#30373E; position: fixed; bottom: 0; width: 100%;"class="footer py-4" >
+        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%; "class="footer py-4" >
             <div style="margin: auto"class="container">
                 <div class="row align-items-center">
                     <div style="color:white"class="col text-lg-start">Game/Music Jam</div>
@@ -215,11 +197,6 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="https://itch.io/jam/gmjam2021">
-                                    <img style="max-height:30px" src="assets/itchgmjam.png">
-                                </a>
-                            </div>
-                            <div class="col">
                                 <a href="https://twitter.com/GameMusicJam">
                                     <img style="max-height:30px" src="assets/twitterlogo.png">
                                 </a>
@@ -227,6 +204,11 @@
                             <div class="col">
                                 <a href="https://www.instagram.com/gamemusicjam/">
                                     <img style="max-height:30px" src="assets/instagramlogo.png">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="mailto: admin@gamemusicjam.org">
+                                    <img style="max-height:30px" src="assets/mail.png">
                                 </a>
                             </div>
                         </div>

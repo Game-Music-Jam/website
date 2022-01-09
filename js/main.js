@@ -43,14 +43,16 @@ function show() {
 }
 function show2020() {
 	document.getElementById("newMenu").style.visibility = "visible";
+	document.getElementById("topmenu").style.top = "96px";
 	document.getElementById("menu1").textContent = "GM Jam '20";
-	document.getElementById("menu1").href = "gm20.html";
+	document.getElementById("menu1").href = "gmj20.html";
 	document.getElementById("menu2").style.padding = "0px"
 }
 function show2021() {
 	document.getElementById("newMenu").style.visibility = "visible";
+	document.getElementById("topmenu").style.top = "62px";
 	document.getElementById("menu1").textContent = "GM Jam '21";
-	document.getElementById("menu1").href = "gm21.html";
+	document.getElementById("menu1").href = "gmj21.html";
 	document.getElementById("menu2").style.padding = "0px"
 }
 function show2022() {

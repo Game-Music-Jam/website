@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overscroll-behavior-y: none;">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -40,7 +40,7 @@
             margin: .5rem auto;
         }
      </style>
-    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat;">
+    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat; overflow: hidden">
         <script>
             var md = new MobileDetect(window.navigator.userAgent);
             if (md.mobile() || md.tablet()) {
@@ -91,7 +91,7 @@
                                             </div>
                                     </div>
                                 </div> 
-                                <div class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px; position: relative; right:313px">
+                                <div id="topmenu" class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px; position: relative; right:313px">
                                     <div class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px;">
                                         <div class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
                                             <a class="dropdown-item" id="menu1"></a>
@@ -102,8 +102,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item" style="z-index: 1000;">
-                        <a class="nav-link active" aria-current="page" style="color:white; z-index: 1000;" href="about.html">About</a>
+                    <li class="nav-item" >
+                        <a class="nav-link active" aria-current="page" style="color:white;" href="about.html">About</a>
                       </li>		
                       <li class="nav-item" style="padding-right: 5px">
                         <a class="nav-link active" aria-current="page" style="color:white" href="contact.html">Contact</a>
@@ -157,11 +157,11 @@
               }
             }, 1000);
             </script>
-        <header class="masthead" style="background-image: url(assets/img/gmjamcover.jpg); padding-bottom:150px;">
+        <header class="masthead" style="background-image: url(assets/img/gmjamcover.jpg); padding-bottom:40px;">
             <div class="container">
-                <img style="height: 240px; padding: 20px"src="assets/img/gmjam.png">
+                <img style="height: 190px; padding: 20px"src="assets/img/gmjam.png">
                 <div style="font-family: Impact; font-size:30pt; padding: 1px">
-                    GAME/MUSIC JAM 2022 <br>
+                    GAME/MUSIC JAM '22 <br>
                     <div style="font-family: Verdana; font-size:20pt; padding:10pt">
                         Registration starts in:<br>
                     </div>
@@ -197,12 +197,7 @@
                                     <div class="col"></div>
                                 </div>
                             </div>
-                            <!-- <b><div style="font-size: 35pt" id="demo"></div></b>
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutes&nbsp;&nbsp;&nbsp;&nbsp;seconds</div> -->
                         </div>
-                    <!-- </a> -->
-                <!-- </div> -->
-                <!-- <br> -->
             </div>
         </header>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -246,7 +241,7 @@
         <br><br>
         <br>
         <!-- Footer-->
-        <footer style="background-color:#30373E; position: fixed; bottom: 0; width: 100%; z-index: 100000"class="footer py-4" >
+        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%; z-index:1000"class="footer py-4" >
             <div style="margin: auto"class="container">
                 <div class="row align-items-center">
                     <div style="color:white"class="col text-lg-start">Game/Music Jam</div>
@@ -260,11 +255,6 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="https://itch.io/jam/gmjam2021">
-                                    <img style="max-height:30px" src="assets/itchgmjam.png">
-                                </a>
-                            </div>
-                            <div class="col">
                                 <a href="https://twitter.com/GameMusicJam">
                                     <img style="max-height:30px" src="assets/twitterlogo.png">
                                 </a>
@@ -272,6 +262,11 @@
                             <div class="col">
                                 <a href="https://www.instagram.com/gamemusicjam/">
                                     <img style="max-height:30px" src="assets/instagramlogo.png">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="mailto: admin@gamemusicjam.org">
+                                    <img style="max-height:30px" src="assets/mail.png">
                                 </a>
                             </div>
                         </div>

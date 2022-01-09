@@ -17,6 +17,8 @@
 
 
 //B722B2DF3D9D1CC7C19BBC81D410AD65D9FF
+//D2294FE518B092703E0E62927723B34CE162
+//ED0B17A1C2E380B92DE21B76DB37B8FA0E64
 function sendMail() {
 	var name = document.getElementById("exampleFormControlInput1").value;
 	var email = document.getElementById("exampleFormControlInput2").value;
@@ -24,15 +26,24 @@ function sendMail() {
 	var body = document.getElementById("exampleFormControlTextarea1").value;
 	Email.send({
 		Host : "smtp.elasticemail.com",
-		Username : "acqmiles@gmail.com",
-		Password : "B722B2DF3D9D1CC7C19BBC81D410AD65D9FF",
+		Username : "contact.gamemusicjam@gmail.com",
+		Password : "ED0B17A1C2E380B92DE21B76DB37B8FA0E64",
 		To : 'admin@gamemusicjam.org',
-		From : "acqmiles@gmail.com",
+		From : "contact.gamemusicjam@gmail.com",
 		Subject : "GM JAM CONTACT FORM",
 		Body : "FROM: " + name + " " + email + " MESSAGE: " + body
 	}).then(
-	  message => alert(message)
+		message => alert(message)
 	);
+	// Email.send({
+	// 	Host : "smtp.elasticemail.com",
+	// 	Username : "contact.gmjam@gmail.com",
+	// 	Password : "B722B2DF3D9D1CC7C19BBC81D410AD65D9FF",
+	// 	To : email,
+	// 	From : "contact.gmjam@gmail.com",
+	// 	Subject : "GM JAM CONTACT FORM",
+	// 	Body : "Thanks for your message! We'll get back to you soon. - Game Music Jam"
+	// });
 }
 
 function show() {

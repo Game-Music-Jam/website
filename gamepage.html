@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" style="overscroll-behavior-y: none;">
+<html lang="en" xmlns="http://www.w3.org/1999/html" style="overscroll-behavior-y: none;" >
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,15 +16,6 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <script>
-            var md = new MobileDetect(window.navigator.userAgent);
-            if (md.mobile() || md.tablet()) {
-                document.location.href = 'mobile-home.html';
-            }
-            document.getElementById("title").textContent = "alksd";
-            //document.getElementById("year").textContent = "GAME MUSIC JAM '" + sessionStorage.getItem("year");;
-        </script>
         <!-- Navigation-->
         <style>
             .visi {
@@ -43,6 +34,12 @@
             li {
                 font-family: Montserrat;
                 color:white
+            }
+            h3,h1 {
+                font-family: Impact;
+            }
+            h5 {
+                font-family: Verdana;
             }
          </style>
         <script src="mobile-detect.js"></script>
@@ -93,33 +90,19 @@
        
         <header class="masthead" style="background-image: url(assets/img/gmjamcover.jpg);">
             <div class="container">
-                <!-- <div class="row"> -->
-                    <div class="col">
-                        <br>
-                        <img style="height: 200px; padding: 20px"src="assets/img/gmjam.png">
-                        <h1 id="year">
-                            year
-                        </h1>
-                        <br>
-                <br>
-                <br>
-                    </div>
-                    <!-- <div class="col">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yPN95cj5g7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div> -->
+                <div class="col">
+                    <br>
+                    <img style="height: 200px; padding: 20px"src="assets/img/gmjam.png">
+                    <h1 id="year">
+                        year
+                    </h1>
+                    <br>
+                    <br>
+                    <br>
                 </div>
-            <!-- </div> -->
+            </div>
             <br><br><br>
         </header>
-        <style>
-            h3,h1 {
-                font-family: Impact;
-            }
-            h5 {
-                font-family: Verdana;
-            }
-        </style>
-        
         <div class="container-fluid">
             <div class="row">
             <div class="col-sm" style="background-image: url(assets/img/20bg.png);" style="filter:drop-shadow(0 0 0.75rem black)">
@@ -131,8 +114,10 @@
                                 <iframe width="450" height="250" src="https://www.youtube.com/embed/HQlCHFx4JW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="col">
-                                <h1 style="font-size: 35pt; text-align: left;" id="title">
-                                    GAME TITLE
+                                <h1 style="font-size: 35pt; text-align: left;">
+                                    <div id="title">
+                                        GAME TITLE
+                                    </div>
                                 </h1>
                                 <p style="text-align: left;">
                                     Developer 1 from University of Manitoba - @cooldev<br>
@@ -154,7 +139,6 @@
                                     Track 2<br>
                                     Track 3<br>
                                 </p>
-                                
                             </div>
                             <div class="col" style="text-align: left">
                                 <iframe width="450" height="250" src="https://www.youtube.com/embed/HQlCHFx4JW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -199,5 +183,13 @@
                 </div>
             </div>
         </footer>
+        <script>
+            //var md = new MobileDetect(window.navigator.userAgent);
+            //if (md.mobile() || md.tablet()) {
+            //    document.location.href = 'mobile-home.html';
+            //}
+            document.getElementById("title").textContent = sessionStorage.getItem("name");
+            document.getElementById("year").textContent = "GAME MUSIC JAM '" + sessionStorage.getItem("year");
+        </script>
     </body>
 </html>

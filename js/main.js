@@ -14,6 +14,8 @@
 
 })(jQuery);
 
+
+
 //B722B2DF3D9D1CC7C19BBC81D410AD65D9FF
 function sendMail() {
 	var name = document.getElementById("exampleFormControlInput1").value;
@@ -31,8 +33,8 @@ function sendMail() {
 	}).then(
 	  message => alert(message)
 	);
-
 }
+
 function show() {
 	if (document.getElementById("jam1").style.visibility == "visible") {
 		document.getElementById("jam1").style.visibility = "hidden";
@@ -64,4 +66,11 @@ function showUpcoming() {
 var md = new MobileDetect(window.navigator.userAgent);
 if (md.mobile() || md.tablet()) {
 	document.location.href = 'mobile-home.html';
+}
+
+function openGame(year, name, people, tracklist, demolink, playlist) {
+	sessionStorage.setItem("year", year);
+	sessionStorage.setItem("name", name);
+	// sessionStorage.setItem("people", year);
+	// sessionStorage.setItem("tracklist", tracklist);
 }

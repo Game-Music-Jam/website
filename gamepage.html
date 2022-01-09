@@ -22,6 +22,8 @@
             if (md.mobile() || md.tablet()) {
                 document.location.href = 'mobile-home.html';
             }
+            document.getElementById("title").textContent = "alksd";
+            //document.getElementById("year").textContent = "GAME MUSIC JAM '" + sessionStorage.getItem("year");;
         </script>
         <!-- Navigation-->
         <style>
@@ -88,15 +90,15 @@
             </div>
           </nav>
         <!-- Masthead-->
-        
+       
         <header class="masthead" style="background-image: url(assets/img/gmjamcover.jpg);">
             <div class="container">
                 <!-- <div class="row"> -->
                     <div class="col">
                         <br>
                         <img style="height: 200px; padding: 20px"src="assets/img/gmjam.png">
-                        <h1>
-                            GAME/MUSIC JAM '20
+                        <h1 id="year">
+                            year
                         </h1>
                         <br>
                 <br>
@@ -117,6 +119,7 @@
                 font-family: Verdana;
             }
         </style>
+        
         <div class="container-fluid">
             <div class="row">
             <div class="col-sm" style="background-image: url(assets/img/20bg.png);" style="filter:drop-shadow(0 0 0.75rem black)">
@@ -128,7 +131,7 @@
                                 <iframe width="450" height="250" src="https://www.youtube.com/embed/HQlCHFx4JW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="col">
-                                <h1 style="font-size: 35pt; text-align: left;">
+                                <h1 style="font-size: 35pt; text-align: left;" id="title">
                                     GAME TITLE
                                 </h1>
                                 <p style="text-align: left;">

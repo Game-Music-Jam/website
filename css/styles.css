@@ -244,7 +244,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #cca000;
+  color: #83FA4D;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -9912,7 +9912,7 @@ textarea.form-control-lg {
   }
 
   .text-lg-start {
-    text-align: left !important;
+    text-align: left ;
   }
 
   .text-lg-end {

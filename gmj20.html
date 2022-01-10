@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <title>Game Music Jam</title>
         <!-- Favicon-->
@@ -59,18 +60,18 @@
                                     <div class="dropdown"> 
                                         <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
                                             <div style="background-color: #7D4D8F; color:white" class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1" >
-                                                <a class="dropdown-item" onClick="showUpcoming()" href="#">Upcoming Events</a>
-                                                <a class="dropdown-item" onClick="show2022()" href="#">2022</a>
-                                                <a class="dropdown-item" onClick="show2021()" href="#">2021</a>
-                                                <a class="dropdown-item" onClick="show2020()" href="#">2020</a>
+                                                <a class="dropdown-item" style="color:white" onClick="showUpcoming()" href="#">Upcoming Events</a>
+                                                <a class="dropdown-item" style="color:white" onClick="show2022()" href="#">2022</a>
+                                                <a class="dropdown-item" style="color:white" onClick="show2021()" href="#">2021</a>
+                                                <a class="dropdown-item" style="color:white" onClick="show2020()" href="#">2020</a>
                                             </div>
                                     </div>
                                 </div> 
-                                <div id="topmenu" class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; color:white; max-width: 0px; position: relative; right:313px">
-                                    <div class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px;">
-                                        <div style="background-color: #7D4D8F; color:white" class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
-                                            <a class="dropdown-item" id="menu1"></a>
-                                            <a class="dropdown-item" id="menu2"></a>
+                                <div id="topmenu" class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; background-color:#7D4D8F; max-width: 0px; position: relative; right:313px">
+                                    <div class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px; cobackground-colorlor:#7D4D8F">
+                                        <div style="background-color:#7D4D8F" class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
+                                            <a class="dropdown-item" style="color:white" id="menu1"></a>
+                                            <a class="dropdown-item" style="color:white" id="menu2"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +104,8 @@
                 <br>
                     </div>
                     <div class="col">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yPN95cj5g7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <div style="background-image: url(20img/showcase.jpg);  width: 560px; height: 315px; background-size:100%; background-size: cover;" class="youtube-player" data-id="yPN95cj5g7o"></div> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yPN95cj5g7o?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -124,9 +126,8 @@
                 max-width: 100%;
                 background: #000;
                 margin: 5px;
-              }
-            
-              .youtube-player iframe {
+                }
+                .youtube-player iframe {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -134,9 +135,8 @@
                 height: 100%;
                 z-index: 100;
                 background: transparent;
-              }
-            
-              .youtube-player img {
+                }
+                .youtube-player img {
                 object-fit: cover;
                 display: block;
                 left: 0;
@@ -153,13 +153,11 @@
                 -webkit-transition: 0.4s all;
                 -moz-transition: 0.4s all;
                 transition: 0.4s all;
-              }
-            
-              .youtube-player img:hover {
+                }
+                .youtube-player img:hover {
                 -webkit-filter: brightness(75%);
-              }
-            
-              .youtube-player .play {
+                }
+                .youtube-player .play {
                 height: 72px;
                 width: 72px;
                 left: 50%;
@@ -167,10 +165,49 @@
                 margin-left: -36px;
                 margin-top: -36px;
                 position: absolute;
-                background: url('//i.imgur.com/TxzC70f.png') no-repeat;
+                background: url(‘//i.imgur.com/TxzC70f.png’) no-repeat;
                 cursor: pointer;
-              }
+                }
         </style>
+        <script type="text/javascript">
+            function myIframe(div) {
+                var iframe = document.createElement('iframe');
+                iframe.setAttribute(
+                    'src',
+                    'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0'
+                );
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allowfullscreen', '1');
+                iframe.setAttribute(
+                    'allow',
+                    'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                );
+                div.parentNode.replaceChild(iframe, div);
+            }
+        
+            function initYouTubeVideo() {
+                var playerElements = document.getElementsByClassName('youtube-player');
+                for (var n = 0; n < playerElements.length; n++) {
+                    var videoId = playerElements[n].dataset.id;
+                    var div = document.createElement('div');
+                    div.setAttribute('data-id', videoId);
+                    var thumbNode = document.createElement('img');
+                    thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace(
+                        'ID',
+                        videoId
+                    );
+                    div.appendChild(thumbNode);
+                    var playButton = document.createElement('div');
+                    playButton.setAttribute('class', 'play');
+                    div.appendChild(playButton);
+                    div.onclick = function () {
+                        myIframe(this);
+                    };
+                    playerElements[n].appendChild(div);
+                }
+            }document.addEventListener('DOMContentLoaded', initYouTubeVideo);
+        </script>
+    
         <div class="container-fluid">
             <div class="row">
             <div class="col-sm" style="background-image: url(assets/img/20bg.png);" style="filter:drop-shadow(0 0 0.75rem black)">
@@ -184,13 +221,12 @@
                         <br> <br>
                         <div class="row" style="display: flex;
                         flex-direction: row; ">
-                            <!-- <div class="col-sm">
-                            </div> -->
                             <div class="col-sm" >
                                 <h3>
                                     BEST <br>NARRATIVE 
                                 </h3>
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/r2kdfbefDQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <!-- <iframe width="350" height="250" src="https://www.youtube.com/embed/r2kdfbefDQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                <div style="background-image: url(20img/1.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="r2kdfbefDQE"></div>
                                 <h5>
                                     Campfyr
                                 </h5>
@@ -199,7 +235,8 @@
                                     <h3>
                                         BEST <br>VISUALS 
                                     </h3>
-                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/JKZDh6bA_3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div style="background-image: url(20img/2.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="JKZDh6bA_3Y"></div>
+                                    <!-- <iframe width="350" height="250" src="https://www.youtube.com/embed/JKZDh6bA_3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                                     <h5>
                                         Recollection Day
                                     </h5>
@@ -209,7 +246,7 @@
                                     <h3>
                                         BEST <br>THEMATIC INTERPRETATION
                                     </h3>
-                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/JPgZGaYQV-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div style="background-image: url(20img/3.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="b-SBF5kEy7c"></div>
                                     <h5>
                                         Momento Mori
                                     </h5>
@@ -481,49 +518,4 @@
             </div>
         </footer>
     </body>
-    <script>
-        /*
-         * Light YouTube Embeds by @labnol
-         * Credit: https://www.labnol.org/
-         */
-      
-        function labnolIframe(div) {
-          var iframe = document.createElement('iframe');
-          iframe.setAttribute(
-            'src',
-            'https://www.youtube.com/embed/' + div.dataset.id + '?autoplay=1&rel=0'
-          );
-          iframe.setAttribute('frameborder', '0');
-          iframe.setAttribute('allowfullscreen', '1');
-          iframe.setAttribute(
-            'allow',
-            'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-          );
-          div.parentNode.replaceChild(iframe, div);
-        }
-      
-        function initYouTubeVideos() {
-          var playerElements = document.getElementsByClassName('youtube-player');
-          for (var n = 0; n < playerElements.length; n++) {
-            var videoId = playerElements[n].dataset.id;
-            var div = document.createElement('div');
-            div.setAttribute('data-id', videoId);
-            var thumbNode = document.createElement('img');
-            thumbNode.src = '//i.ytimg.com/vi/ID/hqdefault.jpg'.replace(
-              'ID',
-              videoId
-            );
-            div.appendChild(thumbNode);
-            var playButton = document.createElement('div');
-            playButton.setAttribute('class', 'play');
-            div.appendChild(playButton);
-            div.onclick = function () {
-              labnolIframe(this);
-            };
-            playerElements[n].appendChild(div);
-          }
-        }
-      
-        document.addEventListener('DOMContentLoaded', initYouTubeVideos);
-      </script>
 </html>

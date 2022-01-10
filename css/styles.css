@@ -3775,11 +3775,12 @@ textarea.form-control-lg {
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: #1e2125;
-  background-color: #e9ecef;
+  background-color: #E2A9FA;
+  font-weight: bold;
 }
 .dropdown-item.active, .dropdown-item:active {
-  color: #fff;
-  text-decoration: none;
+  color: #E2A9FA;
+  font-weight: bolder;
   background-color: #71DB42;
 }
 .dropdown-item.disabled, .dropdown-item:disabled {
@@ -3808,32 +3809,33 @@ textarea.form-control-lg {
 }
 
 .dropdown-menu-dark {
-  color: #dee2e6;
+  color: #E2A9FA;
   background-color: #343a40;
   border-color: rgba(0, 0, 0, 0.15);
 }
 .dropdown-menu-dark .dropdown-item {
-  color: #dee2e6;
+  color: #E2A9FA;
 }
 .dropdown-menu-dark .dropdown-item:hover, .dropdown-menu-dark .dropdown-item:focus {
-  color: #fff;
+  color: #E2A9FA;
+  font-weight: bolder;
   background-color: rgba(255, 255, 255, 0.15);
 }
 .dropdown-menu-dark .dropdown-item.active, .dropdown-menu-dark .dropdown-item:active {
-  color: #fff;
+  color: #E2A9FA;
   background-color: #71DB42;
 }
 .dropdown-menu-dark .dropdown-item.disabled, .dropdown-menu-dark .dropdown-item:disabled {
-  color: #adb5bd;
+  color: #E2A9FA;
 }
 .dropdown-menu-dark .dropdown-divider {
   border-color: rgba(0, 0, 0, 0.15);
 }
 .dropdown-menu-dark .dropdown-item-text {
-  color: #dee2e6;
+  color: #E2A9FA;
 }
 .dropdown-menu-dark .dropdown-header {
-  color: #adb5bd;
+  color: #E2A9FA;
 }
 
 .btn-group,

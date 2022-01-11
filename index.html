@@ -26,7 +26,7 @@
         <!-- <link href="css/sticky-footer.css" rel="stylesheet"> -->
         <script src="mobile-detect.js"></script>
     </head>
-    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat;" >
+    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat; background-size: 100%" >
         <script>
             var md = new MobileDetect(window.navigator.userAgent);
             if (md.mobile() || md.tablet()) {
@@ -136,42 +136,42 @@
               document.getElementById("seconds").innerHTML = seconds;
             }, 1000);
             </script>
-        <header class="masthead" style=" padding-bottom:40px;">
-            <div class="container">
-                <img style="height: 220px; padding: 20px"src="assets/img/gmjam.png">
-                <div style="font-family: Impact; font-size:30pt; padding: 1px">
+        <header class="masthead" style="padding-bottom:40px; width: 25%; height: 80%">
+            <div class="container-fluid" style="width: 25%; height: 80%">
+                <img style="width: 25%; height: 10%; padding: .5%"src="assets/img/gmjam.png">
+                <div style="font-family: Impact; font-size:2.5em; padding: 1px">
                     GAME/MUSIC JAM '22 <br>
-                    <div style="font-family: Verdana; font-size:20pt; padding:10pt">
+                    <div style="font-family: Verdana; font-size:.5em; padding:10pt">
                         Registration starts in:<br>
                     </div>
                 </div>
                 <br>
-                        <div style="color: white">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col"></div>
-                                    <div class="col"></div>
-                                    <div class="col timediv">
-                                        <p id="days" class="time"></p>
-                                        <p>days</p>
-                                    </div>
-                                    <div class="col timediv vertical">
-                                        <p id="hours" class="time"></p>
-                                        <p>hours</p>
-                                    </div>
-                                    <div class="col timediv vertical">
-                                        <p id="minutes" class="time"></p>
-                                        <p>minutes</p>
-                                    </div>
-                                    <div class="col timediv vertical">
-                                        <p id="seconds" class="time"></p>
-                                        <p>seconds</p>
-                                    </div>
-                                    <div class="col">&nbsp;</div>
-                                    <div class="col"></div>
-                                </div>
+                <div style=" color: white;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col timediv">
+                                <p id="days" class="time"></p>
+                                <p>days</p>
                             </div>
+                            <div class="col timediv vertical">
+                                <p id="hours" class="time"></p>
+                                <p>hours</p>
+                            </div>
+                            <div class="col timediv vertical">
+                                <p id="minutes" class="time"></p>
+                                <p>minutes</p>
+                            </div>
+                            <div class="col timediv vertical">
+                                <p id="seconds" class="time"></p>
+                                <p>seconds</p>
+                            </div>
+                            <div class="col">&nbsp;</div>
+                            <div class="col"></div>
                         </div>
+                    </div>
+                </div>
             </div>
         </header>
         <br><br><br><br><br>
@@ -216,22 +216,20 @@
         <!-- <br><br>
         <br> -->
         <!-- Footer-->
-        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%; z-index:1000"class="footer py-4" >
+        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%;"class="footer py-4" >
             <div style="margin: auto"class="container-fluid">
-                <div class="row align-items-right">
+                <div class="row align-items-center">
                     <div style="color:white"class="col text-lg-start"><strong>Game/Music Jam</strong></div>
-                    <!-- <div style="color:white"class="col text-lg-start"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8TVlDEpnDpA0Nyv7QiXe1AuymMtfNPMatJOZ9QyQtO9qWQ/viewform?usp=sf_link"><u>Report bugs here!</u></a></div> -->
-                    
                     <div class="col-3">
                         <div class="row">
                             <div class="col">
-                                <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/gamemusicjam">
+                                <a target="_blank" rel="noopener noreferrer"href="https://tinyurl.com/gamemusicjam">
                                     <img class="nav-item"  style="max-height:30px" src="assets/discordlogo.png">
                                 </a>
                             </div>
                             <div class="col">
-                                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/GameMusicJam">
-                                    <img style="max-height:30px" src="assets/twitterlogo.png">
+                                <a target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCIoKCiOQl9L8xNExupEPpxQ/">
+                                    <img style="max-height:30px" src="assets/youtube.png">
                                 </a>
                             </div>
                             <div class="col">
@@ -240,13 +238,13 @@
                                 </a>
                             </div>
                             <div class="col">
-                                <a target="_blank" rel="noopener noreferrer" href="mailto: admin@gamemusicjam.org">
-                                    <img style="max-height:30px" src="assets/mail.png">
+                                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/GameMusicJam">
+                                    <img style="max-height:30px" src="assets/twitterlogo.png">
                                 </a>
                             </div>
                             <div class="col">
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCIoKCiOQl9L8xNExupEPpxQ/">
-                                    <img style="max-height:30px" src="assets/youtube.png">
+                                <a target="_blank" rel="noopener noreferrer" href="mailto: admin@gamemusicjam.org">
+                                    <img style="max-height:30px" src="assets/mail.png">
                                 </a>
                             </div>
                         </div>

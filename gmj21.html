@@ -24,8 +24,17 @@
             document.location.href = 'mobile-gmj21.html';
         }
     </script>
-    <style>
-        .visi {
+    <body id="page-top">
+        <!-- Navigation-->
+        <script>
+            var md = new MobileDetect(window.navigator.userAgent);
+            if (md.mobile() || md.tablet()) {
+                document.location.href = 'mobile-home.html';
+            }
+        </script>
+        <!-- Navigation-->
+        <style>
+             .visi {
             visibility: hidden;
         }
         .twvisi {
@@ -38,20 +47,6 @@
         .dropdown-menu {
             margin: .5rem auto;
         }
-     </style>
-    <body id="page-top">
-        <!-- Navigation-->
-        <script>
-            var md = new MobileDetect(window.navigator.userAgent);
-            if (md.mobile() || md.tablet()) {
-                document.location.href = 'mobile-home.html';
-            }
-        </script>
-        <!-- Navigation-->
-        <style>
-            .visi {
-                visibility: hidden;
-            }
             h1 {
                 font-family: Impact;
             }
@@ -158,12 +153,12 @@
                             <div class="row">
                                 <div class="dropdown" style="font-family: Montserrat; color:white;">
                                     <div class="dropdown"> 
-                                        <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton" onmouseover="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+                                        <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
                                             <div style="background-color: #7D4D8F; color:white" class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1" >
-                                                <a class="dropdown-item" style="color:white" onmouseover="showUpcoming()" href="#">Upcoming Events</a>
-                                                <a class="dropdown-item" style="color:white" onmouseover="show2022()" href="#">2022</a>
-                                                <a class="dropdown-item" style="color:white" onmouseover="show2021()" href="#">2021</a>
-                                                <a class="dropdown-item" style="color:white" onmouseover="show2020()" href="#">2020</a>
+                                                <a class="dropdown-item" style="color:white" onclick="showUpcoming()" href="#">Upcoming Events</a>
+                                                <a class="dropdown-item" style="color:white" onclick="show2022()" href="#">2022</a>
+                                                <a class="dropdown-item" style="color:white" onclick="show2021()" href="#">2021</a>
+                                                <a class="dropdown-item" style="color:white" onclick="show2020()" href="#">2020</a>
                                             </div>
                                     </div>
                                 </div> 
@@ -199,8 +194,8 @@
                             GAME/MUSIC JAM '21
                         </h1>
                         <br>
-                <br>
-                <br>
+                        <br>
+                        <br>
                     </div>
                     <div class="col">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Ah6_84hhCPA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -217,218 +212,246 @@
                 font-family: Verdana;
             }
             .col-sm {
-                padding: 0px;
+                padding: 8px;
             }
         </style>
         <div class="container-fluid">
             <div class="row">
-            <div class="col-sm" style="background-image: url(assets/img/20bg.png);" style="filter:drop-shadow(0 0 0.75rem black)">
-            </div>
+                <!-- <div class="col-sm" style="background-image: url(assets/img/20bg.png);"></div> -->
                 <div class="page-section bg-light col" id="team" style="text-align: center; min-width:85%">
                     <h1 style="font-size: 35pt;">
                         GAME MUSIC JAM '21 AWARDS
                     </h1>
                     <br>
-                    <div class="container" >
-                        <br> <br>
+                    <div class="container">
+                        <br> 
                         <div class="row">
+                            <div class="col-sm"></div>
                             <div class="col-sm">
                                 <h3>
                                     THE G/M JAM '21 FUNDRAISER AWARD
                                 </h3>
-                                <!-- <div style="background-image: url(21img/18.jpg);  width: 350px; height:250px; max-height: 250px; background-size:100%" class="youtube-player" data-id="CjAIKHYGsbY"></div> -->
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/CjAIKHYGsbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-container" >
+                                    <!-- <div style="background-image: url(21img/18.jpg);  width: 350px; height:250px; max-height: 250px; background-size:100%" class="youtube-player" data-id="CjAIKHYGsbY"></div> -->
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/CjAIKHYGsbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
                                     Return of the Cats
                                 </h5>
                             </div>
-                    </div>
-                    <br> <br>
-                    <div class="row">
-                        <div class="col-sm">
-                            <h3>
-                                BEST <br>NARRATIVE 
-                            </h3>
-                            <div style="background-image: url(21img/2.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="awUiKG7YXYc"></div>
-                            <!-- <iframe width="350" height="250" src="https://www.youtube.com/embed/awUiKG7YXYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <h5>
-                                An Island Apart<br>
-                            </h5>
-                            <br>
+                            <div class="col-sm"></div>
                         </div>
-                        <div class="col-sm">
-                            <h3>
-                                BEST <br>ARTWORK 
-                            </h3>
-                            <div style="background-image: url(21img/18.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="CjAIKHYGsbY"></div>
-                            <!-- <iframe width="350" height="250" src="https://www.youtube.com/embed/CjAIKHYGsbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <h5>
-                                Return of the Cats<br>
-                            </h5>
-                            <br>
-                        </div>
-                        <div class="col-sm">
+                        <br> 
+                        <div class="row">
+                            <div class="col-sm">
+                                <h3>
+                                    BEST <br>NARRATIVE 
+                                </h3>
+                                <div class="video-container">
+                                    <!-- <div style="background-image: url(21img/2.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="awUiKG7YXYc"></div> -->
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/awUiKG7YXYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <h5>
+                                    An Island Apart
+                                </h5>
+                                <!-- <br> -->
+                            </div>
+                            <div class="col-sm">
+                                <h3>
+                                    BEST <br>ARTWORK 
+                                </h3>
+                                <div class="video-container">
+                                    <!-- <div style="background-image: url(21img/18.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="CjAIKHYGsbY"></div> -->
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/CjAIKHYGsbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <h5>
+                                    Return of the Cats
+                                </h5>
+                                <!-- <br> -->
+                            </div>
+                            <div class="col-sm">
                                 <h3>
                                     BEST <br>THEMATIC INTERPRETATION
                                 </h3>
-                                <div style="background-image: url(21img/15.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="vRaSCcNhlZs"></div>
-                                <!-- <iframe width="350" height="250" src="https://www.youtube.com/embed/vRaSCcNhlZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                                <div class="video-container">
+                                    <!-- <div style="background-image: url(21img/15.jpg);  width: 350px; height: 250px; background-size:100%" class="youtube-player" data-id="vRaSCcNhlZs"></div> -->
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/vRaSCcNhlZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
-                                    Spiritus<br>
+                                    Spiritus
                                 </h5>
-                                <br>
+                                <!-- <br> -->
+                            </div>
                         </div>
                         <br>
-                    <!-- </div> -->
-                    <br>
-                    <!-- <div class="row"> -->
-                        <div class="col-sm">
-                            <h3>
-                                BEST <br>MUSICAL INTERPRETATION 
-                            </h3>
-                            <iframe width="350" height="250" src="https://www.youtube.com/embed/cUtlPYWFkxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <h5>
-                                Sticky Keys
-                            </h5>
-                        </div>
-                        <div class="col-sm">
+                        <br>
+                        <div class="row">
+                            <div class="col-sm">
                                 <h3>
-                                    BEST <br>GAMEPLAY 
+                                    BEST <br>MUSICAL INTERPRETATION 
                                 </h3>
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/cUtlPYWFkxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-container">
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/cUtlPYWFkxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
                                     Sticky Keys
                                 </h5>
-                        </div>
-                        <div class="col-sm">
+                            </div>
+                            <div class="col-sm">
+                                <h3>
+                                    BEST <br>GAMEPLAY 
+                                </h3>
+                                <div class="video-container">
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/cUtlPYWFkxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <h5>
+                                    Sticky Keys
+                                </h5>
+                            </div>
+                            <div class="col-sm">
                                 <h3>
                                     BEST <br>SOUNDTRACK
                                 </h3>
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/Pg-gOXbB5sI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-container">
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/Pg-gOXbB5sI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
                                     Return to Manufacturer
                                 </h5>
                                 <br>
+                            </div>
+                        <br>
                         </div>
                         <br>
-                    </div>
-                    <br>
-                    <hr>
-                    <br>
-                    <h1>
-                        ALL GAMES
+                        <hr>
                         <br>
-                    </h1>
-                    <br><br>
+                        <h1>
+                            ALL GAMES<br>
+                        </h1>
+                        <br><br>
                         <div class="row">
                             <div class="col-sm">
                                 <br>
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/TvhhVDya5RA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-container">
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/TvhhVDya5RA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
                                     Department Dash
                                 </h5>
                             </div>
                             <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/awUiKG7YXYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        An Island Apart
-                                    </h5>
+                                </div>
+                                <h5>
+                                    An Island Apart
+                                </h5>
                             </div>
                             <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/x9fpTta40BI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        Meowtini
-                                    </h5>
+                                </div>
+                                <h5>
+                                    Meowtini
+                                </h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm">
                                 <br>
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/dXBGJ2Iq1uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-container">
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/dXBGJ2Iq1uQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
                                     Farmers Life
                                 </h5>
                             </div>
                             <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/TkzTfFbf4fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        Modern Space Race
-                                    </h5>
+                                </div>
+                                <h5>
+                                    Modern Space Race
+                                </h5>
                             </div>
                             <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/WJKTyOfrDzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        Mazonia
-                                    </h5>
                                 </div>
+                                <h5>
+                                    Mazonia
+                                </h5>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm">
                                 <br>
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/IzPEDataNSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-container">
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/IzPEDataNSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
                                     Tempo Run
                                 </h5>
                             </div>
                             <div class="col-sm">
-                                <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/vRaSCcNhlZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        Spiritus
-                                    </h5>
                                 </div>
+                                <h5>
+                                    Spiritus
+                                </h5>
                             </div>
                             <div class="col-sm">
-                                <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/Pg-gOXbB5sI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        Return to Manufacturer
-                                    </h5>
                                 </div>
+                                <h5>
+                                    Return to Manufacturer
+                                </h5>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm">
                                 <br>
-                                <iframe width="350" height="250" src="https://www.youtube.com/embed/CjAIKHYGsbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="video-container">
+                                    <iframe width="350" height="250" src="https://www.youtube.com/embed/CjAIKHYGsbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                                 <h5>
-                                    Return of the Cats
+                                    Return of the Cats<br>
                                 </h5>
                             </div>
                             <div class="col-sm">
-                                <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/cUtlPYWFkxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        Sticky Keys
-                                    </h5>
                                 </div>
+                                <h5>
+                                    Sticky Keys<br>
+                                </h5>
                             </div>
                             <div class="col-sm">
-                                <div class="col-sm">
-                                    <br>
+                                <br>
+                                <div class="video-container">
                                     <iframe width="350" height="250" src="https://www.youtube.com/embed/yKEWRnnSSwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <h5>
-                                        Restitution
-                                    </h5>
                                 </div>
+                                <h5>
+                                    Restitution<br>
+                                </h5>
                             </div>
                         </div>
                 </div>
+                <!-- <div class="col-sm" style="background-image: url(assets/img/20bg.png);"> -->
             </div>
-            <div class="col-sm" style="background-image: url(assets/img/20bg.png);">
-            </div>
-        </section>
         </div>
-        </div>
+        <br><br>
         <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%;"class="footer py-4" >
-            <div style="margin: auto"class="container">
+            <div style="margin: auto"class="container-fluid">
                 <div class="row align-items-center">
                     <div style="color:white"class="col text-lg-start"><strong>Game/Music Jam</strong></div>
                     <!-- <div style="color:white"class="col text-lg-start"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8TVlDEpnDpA0Nyv7QiXe1AuymMtfNPMatJOZ9QyQtO9qWQ/viewform?usp=sf_link"><u>Report bugs here!</u></a></div> -->
@@ -438,27 +461,27 @@
                             <div class="col"></div>
                             <div class="col">
                                 
-                                <a href="https://discord.gg/CMgh39fg">
+                                <a target="_blank" rel="noopener noreferrer"href="https://tinyurl.com/gamemusicjam">
                                     <img class="nav-item"  style="max-height:30px" src="assets/discordlogo.png">
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="https://twitter.com/GameMusicJam">
+                                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/GameMusicJam">
                                     <img style="max-height:30px" src="assets/twitterlogo.png">
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="https://www.instagram.com/gamemusicjam/">
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gamemusicjam/">
                                     <img style="max-height:30px" src="assets/instagramlogo.png">
                                 </a>
                             </div>
                             <div class="col">
-                                <a href="mailto: admin@gamemusicjam.org">
+                                <a target="_blank" rel="noopener noreferrer" href="mailto: admin@gamemusicjam.org">
                                     <img style="max-height:30px" src="assets/mail.png">
                                 </a>
                             </div>
                             <div class="col">
-                                <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCIoKCiOQl9L8xNExupEPpxQ/">
+                                <a target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCIoKCiOQl9L8xNExupEPpxQ/">
                                     <img style="max-height:30px" src="assets/youtube.png">
                                 </a>
                             </div>

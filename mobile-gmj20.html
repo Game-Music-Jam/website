@@ -15,20 +15,12 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <script src="mobile-detect.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <script>
-            var md = new MobileDetect(window.navigator.userAgent);
-            if (md.mobile() || md.tablet()) {
-                document.location.href = 'mobile-gmj20.html';
-            }
-        </script>
-        <!-- Navigation-->
         <style>
             .visi {
-                visibility: hidden;
+                visibility: visible;
             }
             .twvisi {
                 visibility: hidden;
@@ -59,12 +51,12 @@
                             <div class="row">
                                 <div class="dropdown" style="font-family: Montserrat; color:white;">
                                     <div class="dropdown"> 
-                                        <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton" onmouseover="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+                                        <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
                                             <div style="background-color: #7D4D8F; color:white" class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1" >
-                                                <a class="dropdown-item" style="color:white" onmouseover="showUpcoming()" href="#">Upcoming Events</a>
-                                                <a class="dropdown-item" style="color:white" onmouseover="show2022()" href="#">2022</a>
-                                                <a class="dropdown-item" style="color:white" onmouseover="show2021()" href="#">2021</a>
-                                                <a class="dropdown-item" style="color:white" onmouseover="show2020()" href="#">2020</a>
+                                                <a class="dropdown-item" style="color:white" onClick="showUpcoming()" href="#">Upcoming Events</a>
+                                                <a class="dropdown-item" style="color:white" onClick="show2022()" href="#">2022</a>
+                                                <a class="dropdown-item" style="color:white" onClick="show2021()" href="#">2021</a>
+                                                <a class="dropdown-item" style="color:white" onClick="show2020()" href="#">2020</a>
                                             </div>
                                     </div>
                                 </div> 
@@ -95,7 +87,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <br>
+                        <br><br><br>
                         <img style="height: 200px; padding: 20px"src="assets/img/gmjam.png">
                         <h1>
                             GAME/MUSIC JAM '20
@@ -103,10 +95,6 @@
                         <br>
                 <br>
                 <br>
-                    </div>
-                    <div class="col">
-                        <!-- <div style="background-image: url(20img/showcase.jpg);  width: 560px; height: 315px; background-size:100%; background-size: cover;" class="youtube-player" data-id="yPN95cj5g7o"></div> -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yPN95cj5g7o?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -214,6 +202,7 @@
             <div class="col-sm" style="background-image: url(assets/img/20bg.png);" style="filter:drop-shadow(0 0 0.75rem black)">
             </div>
                 <div class="page-section bg-light col" id="team" style="text-align: center; min-width:85%">
+                    <iframe width="350" height="250" src="https://www.youtube.com/embed/yPN95cj5g7o?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <h1 style="font-size: 35pt;">
                         GAME MUSIC JAM '20 AWARDS
                     </h1>
@@ -444,17 +433,10 @@
             </div>
         </div>
         </div>
-        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%;"class="footer py-4" >
-            <div style="margin: auto"class="container">
-                <div class="row align-items-center">
-                    <div style="color:white"class="col text-lg-start">Game/Music Jam</div>
-                    <!-- <div style="color:white"class="col text-lg-start"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8TVlDEpnDpA0Nyv7QiXe1AuymMtfNPMatJOZ9QyQtO9qWQ/viewform?usp=sf_link"><u>Report bugs here!</u></a></div> -->
-                    
-                    <div class="col-3">
-                        <div class="row">
-                            <div class="col"></div>
+        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%; "class="footer py-4" >
+            <div class="container">
+                    <div class="row" style="min-width:495">
                             <div class="col">
-                                
                                 <a href="https://discord.gg/CMgh39fg">
                                     <img class="nav-item"  style="max-height:30px" src="assets/discordlogo.png">
                                 </a>
@@ -464,6 +446,7 @@
                                     <img style="max-height:30px" src="assets/twitterlogo.png">
                                 </a>
                             </div>
+
                             <div class="col">
                                 <a href="https://www.instagram.com/gamemusicjam/">
                                     <img style="max-height:30px" src="assets/instagramlogo.png">
@@ -474,10 +457,7 @@
                                     <img style="max-height:30px" src="assets/mail.png">
                                 </a>
                             </div>
-                            <div class="col"></div>
-                        </div>
                     </div>
-                </div>
             </div>
         </footer>
     </body>

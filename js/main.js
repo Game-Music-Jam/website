@@ -45,7 +45,6 @@ function sendMail() {
 	// 	Body : "Thanks for your message! We'll get back to you soon. - Game Music Jam"
 	// });
 }
-
 function show() {
 	if (document.getElementById("jam1").style.visibility == "visible") {
 		document.getElementById("jam1").style.visibility = "hidden";

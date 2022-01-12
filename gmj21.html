@@ -36,70 +36,24 @@
         <style>
              .visi {
             visibility: hidden;
-        }
-        .twvisi {
-            visibility: hidden;
-        }
-        h2 {
-            font-size: 35;
-            font-family: Impact;
-        }
-        .dropdown-menu {
-            margin: .5rem auto;
-        }
+            }
+            .twvisi {
+                visibility: hidden;
+            }
+            h2 {
+                font-size: 35;
+                font-family: Impact;
+            }
+            .dropdown-menu {
+                margin: .5rem auto;
+                transform: translateY(-8px);
+            }
             h1 {
                 font-family: Impact;
             }
-            .youtube-player {
-                position: relative;
-                padding-bottom: 56.25%;
-                height: 0;
-                overflow: hidden;
-                max-width: 100%;
-                background: #000;
-                margin: 5px;
-                }
-                .youtube-player iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 100;
-                background: transparent;
-                }
-                .youtube-player img {
-                object-fit: cover;
-                display: block;
-                left: 0;
-                bottom: 0;
-                margin: auto;
-                max-width: 100%;
-                width: 100%;
-                position: absolute;
-                right: 0;
-                top: 0;
-                border: none;
-                height: auto;
-                cursor: pointer;
-                -webkit-transition: 0.4s all;
-                -moz-transition: 0.4s all;
-                transition: 0.4s all;
-                }
-                .youtube-player img:hover {
-                -webkit-filter: brightness(75%);
-                }
-                .youtube-player .play {
-                height: 72px;
-                width: 72px;
-                left: 50%;
-                top: 50%;
-                margin-left: -36px;
-                margin-top: -36px;
-                position: absolute;
-                background: url(‘//i.imgur.com/TxzC70f.png’) no-repeat;
-                cursor: pointer;
-                }
+            .show.dropdown .dropdown-toggle::after {
+                
+              }
         </style>
         <script type="text/javascript">
             function myIframe(div) {
@@ -152,21 +106,32 @@
                         <div class="container">
                             <div class="row">
                                 <div class="dropdown" style="font-family: Montserrat; color:white;">
-                                    <div class="dropdown"> 
-                                        <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton" onclick="show()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+                                    <div class="dropdown" onmouseout="show()" onmouseover="show()"> 
+                                        <a href="#!"style="color:white;  "class="nav-link" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
                                             <div style="background-color: #7D4D8F; color:white" class="dropdown-menu visi" aria-labelledby="dropdownMenuButton" id="jam1" >
-                                                <a class="dropdown-item" style="color:white" onclick="showUpcoming()" href="#">Upcoming Events</a>
-                                                <a class="dropdown-item" style="color:white" onclick="show2022()" href="#">2022</a>
-                                                <a class="dropdown-item" style="color:white" onclick="show2021()" href="#">2021</a>
-                                                <a class="dropdown-item" style="color:white" onclick="show2020()" href="#">2020</a>
+                                                <a class="dropdown-item" style="color:white; padding:0px" onclick="showUpcoming()" href="#">
+                                                    &nbsp;&nbsp;Upcoming Events&nbsp;&nbsp;
+                                                </a>
+                                                <a class="dropdown-item" style="color:white; padding:0px" onclick="show2022()" href="#">
+                                                    <p style="margin:10px;"></p>
+                                                    &nbsp;&nbsp;2022&nbsp;&nbsp;
+                                                </a>
+                                                <a class="dropdown-item" style="color:white; padding:0px" onmouseover="show2021()" href="#">
+                                                    <p style="margin:10px;"></p>
+                                                    &nbsp;&nbsp;2021&nbsp;&nbsp;
+                                                </a>
+                                                <a id="item2020" class="dropdown-item" style="color:white; padding:0px" onmouseover="show2020()" href="#">
+                                                    <p style="margin:10px;"></p>
+                                                    &nbsp;&nbsp;2020&nbsp;&nbsp;
+                                                </a>
                                             </div>
                                     </div>
                                 </div> 
-                                <div id="topmenu" class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; background-color:#7D4D8F; max-width: 0px; position: relative; right:313px">
-                                    <div class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px; cobackground-colorlor:#7D4D8F">
-                                        <div style="background-color:#7D4D8F" class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
-                                            <a class="dropdown-item" style="color:white" id="menu1"></a>
-                                            <a class="dropdown-item" style="color:white" id="menu2"></a>
+                                <div id="topmenu" class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; background-color:#7D4D8F; max-width: 0px; position: relative; right:313px;">
+                                    <div id="topmenu1" class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px; ">
+                                        <div style="background-color:#7D4D8F; transform: translateX(8px)" class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" id="newMenu">
+                                            <a onmouseleave="leave2020()" style="transform: translateX(1px); padding:0px" class="dropdown-item" style="color:white" id="menu1"></a>
+                                            <a class="dropdown-item" style="color:white; padding:0px" id="menu2"></a>
                                         </div>
                                     </div>
                                 </div>

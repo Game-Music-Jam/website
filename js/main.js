@@ -46,6 +46,12 @@ function sendMail() {
 function show() {
 	if (document.getElementById("jam1").style.visibility == "visible") {
 		if (document.getElementById("newMenu").style.visibility == "visible") {
+			if (document.getElementById("menu2").style.fontWeight != "bold") {
+				// document.getElementById("jam1").style.visibility = "hidden";
+				// document.getElementById("newMenu").style.visibility = "hidden";
+				// document.getElementById("menu1").style.visibility = "hidden";
+				console.log("alksjdd");
+			}
 				console.log("alksjd");
 		} else {
 			document.getElementById("jam1").style.visibility = "hidden";
@@ -54,6 +60,15 @@ function show() {
 	} else {
 		document.getElementById("jam1").style.visibility = "visible";
 	}
+}
+
+function show2022() {
+	// document.getElementById("jam1").style.visibility = "hidden";
+	// document.getElementById("newMenu").style.visibility = "hidden";
+	// document.getElementById("jam1").style.visibility = "visible";
+	// document.getElementById("menu1").style.visibility = "hidden";
+	// document.getElementById("topmenu").style.visibility = "hidden";
+	// document.getElementById("topmenu1").style.visibility = "hidden";
 }
 
 function leave2020() {

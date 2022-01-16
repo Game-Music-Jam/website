@@ -124,34 +124,9 @@
             <div class="row">
                 <div class="col-sm"></div>
                 <div class="col">
-                    <form action="https://postmail.invotes.com/send" method="post" id="email_form">
-
-                        <input type="text" name="subject" placeholder="Subject" />
-                        <textarea name="text" placeholder="Message"></textarea>
-                        <input type="hidden" name="access_token" value="i6qcruvpbyd97pwha9irimq0" />
-                        <!-- return urls can be fully qualified -OR-
-                            start with / for root relative -OR-
-                            start with . for url relative --> 
-                        <input type="hidden" name="success_url" value="https://gamemusicjam.org/contact_success.html" />
-                        <input type="hidden" name="error_url" value="https://gamemusicjam.org/contact_failure.html" />
-                    
-
-                        <!-- set the reply-to address -->
-                        <!-- <input type="text" name="reply_to"
-                                    placeholder="Your Email" /> -->
-
-                        <!-- to append extra fields, use the extra_ prefix.
-                            Entries will be appended to your message body. -->
-                        <!-- <input type="text" name="extra_phone_number"
-                                    placeholder="Phone Number" /> -->
-
-                        <!-- to split your message into 160 chars
-                            for an sms gateway -->
-                        <!-- <input type="hidden"
-                                    name="sms_format" value="true" /> -->
-                    
-                        <input id="submit_form" type="submit" value="Send" onclick="sendhome()"/>
-                    </form>
+                    <h1>
+                        Form successfully submitted!
+                    </h1>
                 </div>
                 <div class="col-sm"></div>
             </div>
@@ -198,6 +173,9 @@
             </div> 
         </footer>
         <script>
+            function sendhome() {
+                document.location.href = 'index.html';
+            }
             var submitButton = document.getElementById("submit_form");
             var form = document.getElementById("email_form");
             form.addEventListener("submit", function (e) {

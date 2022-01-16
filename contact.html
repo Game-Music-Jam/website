@@ -118,39 +118,27 @@
             </div>
         </header>
         <div style="text-align: center; color:white">
-            <a style="color:white; text-decoration: none" target="_blank" rel="noopener noreferrer" href="mailto:admin@gamemusicjam.org?Subject=Website%20Inquiry"><i>Email: admin@gamemusicjam.org</i></a>
+            <a style="color:white; text-decoration: none" target="_blank" rel="noopener noreferrer" href="mailto:admin@gamemusicjam.org?Subject=Website%20Inquiry"><i>Email: admin@gamemusicjam.org<br></i></a>
+            <br>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-sm"></div>
                 <div class="col">
                     <form action="https://postmail.invotes.com/send" method="post" id="email_form">
-
-                        <input type="text" name="subject" placeholder="Subject" />
-                        <textarea name="text" placeholder="Message"></textarea>
-                        <input type="hidden" name="access_token" value="i6qcruvpbyd97pwha9irimq0" />
-                        <!-- return urls can be fully qualified -OR-
-                            start with / for root relative -OR-
-                            start with . for url relative --> 
-                        <input type="hidden" name="success_url" value="https://gamemusicjam.org/contact_success.html" />
-                        <input type="hidden" name="error_url" value="https://gamemusicjam.org/contact_failure.html" />
-                    
-
-                        <!-- set the reply-to address -->
-                        <!-- <input type="text" name="reply_to"
-                                    placeholder="Your Email" /> -->
-
-                        <!-- to append extra fields, use the extra_ prefix.
-                            Entries will be appended to your message body. -->
-                        <!-- <input type="text" name="extra_phone_number"
-                                    placeholder="Phone Number" /> -->
-
-                        <!-- to split your message into 160 chars
-                            for an sms gateway -->
-                        <!-- <input type="hidden"
-                                    name="sms_format" value="true" /> -->
-                    
-                        <input id="submit_form" type="submit" value="Send" onclick="sendhome()"/>
+                        <center>
+                            <label for="exampleFormControlInput1"></label><!--
+                             --><input type="text" name="subject" placeholder="Subject" />
+                             <br>
+                             <p></p>
+                            <textarea name="text" placeholder="Message" style="overflow:scroll; resize:none" rows="4"></textarea>
+                            <br>
+                            <p></p>
+                            <input type="hidden" name="access_token" value="i6qcruvpbyd97pwha9irimq0" />
+                            <input type="hidden" name="success_url" value="https://gamemusicjam.org/contact_success.html" />
+                            <input type="hidden" name="error_url" value="https://gamemusicjam.org/contact_failure.html" />
+                            <input id="submit_form" type="submit" value="Send" />
+                        </center>
                     </form>
                 </div>
                 <div class="col-sm"></div>

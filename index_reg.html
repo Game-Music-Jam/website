@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" style="overscroll-behavior-y: none;">
+<html lang="en" >
+    <!-- style="overscroll-behavior-y: none;" -->
     <head>
         <meta charset="utf-8" />
-        <script src="js/jquery.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js">
-        </script>
-        <script src="server.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Game Music Jam</title>
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <script src="js/main.js"></script>
+        <title>GM Jam</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -20,17 +17,23 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> -->
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <link href="css/sticky-footer.css" rel="stylesheet"> -->
         <script src="mobile-detect.js"></script>
-
     </head>
-    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat; background-size:100%">
-        <!-- Navigation-->
+    <body id="page-top" style="background-image: url(assets/img/gmjamcover.jpg);background-repeat: no-repeat; background-size:100%;background-attachment: fixed;" >
         <script>
             var md = new MobileDetect(window.navigator.userAgent);
             if (md.mobile() || md.tablet()) {
-                document.location.href = 'mobile-contact.html';
+                document.location.href = 'mobile-index_indev.html';
             }
         </script>
+        <!-- Navigation-->
         <style>
             .visi {
                 visibility: hidden;
@@ -45,9 +48,25 @@
             .dropdown-menu {
                 margin: .5rem auto;
             }
-            li {
-                font-family: Montserrat;
-                color:white
+            .vertical {
+                border-left: 5px solid rgba(255, 255, 255, .25);
+                height: 90px;
+            }
+            .timediv {
+                max-width: 300px;
+            }
+            .time {
+                padding-top: 0px;
+                margin-bottom: 0px;
+                font-size: 50pt;
+            }
+            p {
+                line-height: 1;
+            }
+            @media (min-width: 768px){
+                .navbar-nav .dropdown-megamenu:hover .dropdown-container {
+                    display: block;
+                }
             }
          </style>
          <script src="mobile-detect.js"></script>
@@ -86,7 +105,7 @@
                                 </div> 
                                 <div id="topmenu" class="dropdown" style="padding-left: 0px; padding-right: 0px; font-family: Montserrat; background-color:#7D4D8F; max-width: 0px; position: relative; right:313px;">
                                     <div id="topmenu1" class="dropdown" style="padding-left: 70px; padding-top: 39px; max-width: 0px; ">
-                                        <div id="newMenu" style="background-color:#7D4D8F; transform: translateY(-2px) " class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" >
+                                        <div id="newMenu" style="background-color:#7D4D8F; transform: translateY(-2px)" class="dropdown-menu twvisi" aria-labelledby="dropdownMenuButton" >
                                             <a id="menu1" onmouseleave="leave2020()" style="transform: translateX(1px); padding:0px; color:white; text-align:center" class="dropdown-item" style="color:white" ></a>
                                             <a class="dropdown-item" style="color:white; padding:0px" id="menu2"></a>
                                         </div>
@@ -106,54 +125,68 @@
             </div>
           </nav>
         <!-- Masthead-->
-        
-        <header class="masthead">
+        <header class="masthead" style=" padding-bottom:40px;">
             <div class="container">
-                <img style="height: 200px; padding: 20px; padding: 10px"src="assets/img/gmjam.png">
-                        <div style="color: black; padding: 10px; font-family: Verdana; color:white">
-                            
-                            <h1>CONTACT US</h1>
-                        </div>
-                <!-- <br> -->
+                <img style="height: 25vh; padding: 20px"src="assets/img/gmjam.png">
+                <div style="font-family: Impact; font-size:30pt; padding: 1px">
+                    GAME/MUSIC JAM '22 <br>
+                    <div style="font-family: Verdana; font-size:20pt; padding:10pt">
+                        Registration starts in:<br>
+                    </div>
+                </div>
+                <br>
+                <img src="/assets/regbutton.png" style="width:40vw; height:auto">
             </div>
         </header>
-        <div style="text-align: center; color:white">
-            <a style="color:white; text-decoration: none" target="_blank" rel="noopener noreferrer" href="mailto:admin@gamemusicjam.org?Subject=Website%20Inquiry"><i>gamemusicjam.org<br></i></a>
-            <br>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm"></div>
-                <div class="col">
-                    <form action="https://postmail.invotes.com/send" method="post" id="email_form">
-                        <center>
-                            <label for="exampleFormControlInput1"></label><!--
-                             --><input type="text" name="subject" placeholder="Subject" />
-                             <br>
-                             <p></p>
-                            <textarea name="text" placeholder="Message" style="overflow:scroll; resize:none; border:none" rows="4"></textarea>
-                            <br>
-                            <p></p>
-                            <input type="hidden" name="access_token" value="i6qcruvpbyd97pwha9irimq0" />
-                            <input type="hidden" name="success_url" value="https://gamemusicjam.org/contact_success.html" />
-                            <input type="hidden" name="error_url" value="https://gamemusicjam.org/contact_failure.html" />
-                            <input id="submit_form" type="submit" value="Send" />
-                        </center>
-                    </form>
-                </div>
-                <div class="col-sm"></div>
+        <br><br><br><br><br>
+        <!-- <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
-        </div>
-        <br><br><br><br>    
-        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%; height: 10vh"class="footer py-4" >
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="overflow: hidden; " src="carousel/0.png" width="100%">
+                </div>
+                <div class="carousel-item ">
+                    <img style="overflow: hidden; " src="carousel/1.png" width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img style="overflow: hidden; " src="carousel/2.png" width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img style="overflow: hidden; " src="carousel/3.png" width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img style="overflow: hidden; " src="carousel/4.png" width="100%">
+                </div>
+                <div class="carousel-item">
+                    <img style="overflow: hidden; " src="carousel/5.png" width="100%">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div> -->
+        <br><br>
+        <br>
+        <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%; z-index:1000; height: 10vh"class="footer py-4" >
             <div style="margin: auto"class="container-fluid">
-                <div class="row align-items-center">
+                <div class="row align-items-right">
                     <div style="color:white"class="col text-lg-start"><strong>Game/Music Jam</strong></div>
-                    <!-- <div style="color:white"class="col text-lg-start"><a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfe8TVlDEpnDpA0Nyv7QiXe1AuymMtfNPMatJOZ9QyQtO9qWQ/viewform?usp=sf_link"><u>Report bugs here!</u></a></div> -->
+                    <div style="color:white"class="col text-lg-start"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8TVlDEpnDpA0Nyv7QiXe1AuymMtfNPMatJOZ9QyQtO9qWQ/viewform?usp=sf_link"><u></u></a></div>
                     
                     <div class="col-3">
                         <div class="row">
-                            <!-- <div class="col"></div> -->
                             <div class="col">
                                 <a target="_blank" rel="noopener noreferrer" href="https://tinyurl.com/gamemusicjam">
                                     <img class="nav-item"  style="max-height:30px" src="assets/discordlogo.png">
@@ -179,21 +212,10 @@
                                     <img style="max-height:30px" src="assets/youtube.png">
                                 </a>
                             </div>
-                            <div class="col"></div>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </footer>
-        <script>
-            var submitButton = document.getElementById("submit_form");
-            var form = document.getElementById("email_form");
-            form.addEventListener("submit", function (e) {
-                setTimeout(function() {
-                    submitButton.value = "Sending...";
-                    submitButton.disabled = true;
-                }, 1);
-            });
-        </script> 
     </body>
 </html>

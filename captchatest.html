@@ -138,7 +138,13 @@
                             <input type="hidden" name="access_token" value="i6qcruvpbyd97pwha9irimq0" />
                             <input type="hidden" name="success_url" value="https://gamemusicjam.org/contact_success.html" />
                             <input type="hidden" name="error_url" value="https://gamemusicjam.org/contact_failure.html" />
+                            <!-- <div class="g-recaptcha" data-sitekey="6LeO0JchAAAAADtvahLPv0mg1IYkleUfg1TV9DSb"></div> -->
+                            <!-- <button class="g-recaptcha" data-sitekey="6LeO0JchAAAAADtvahLPv0mg1IYkleUfg1TV9DSb" data-callback='onSubmit'data-action='submit'>Submit</button> -->
                             <input id="submit_form" type="submit" value="Send" />
+                            <input id="submit_form" type="submit" value="Send" class="g-recaptcha" 
+                            data-sitekey="6Ld6A5shAAAAAEcWvE48GHyLEYIUlDEW7bi5EXzN" 
+                            data-callback='onSubmit' 
+                            data-action='submit'/>
                         </center>
                     </form>
                 </div>
@@ -146,6 +152,11 @@
             </div>
             
         </div>
+        <script>
+            function onSubmit(token) {
+              document.getElementById("demo-form").submit();
+            }
+          </script>
         <br><br><br><br>    
         <footer style="background-color:#4F4F4F; position: fixed; bottom: 0; width: 100%; height: 10vh"class="footer py-4" >
             <div style="margin: auto"class="container-fluid">

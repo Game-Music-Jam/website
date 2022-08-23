@@ -80,7 +80,7 @@ function leave2020() {
 function show2020() {
 	document.getElementById("newMenu").style.visibility = "visible";
 	document.getElementById("menu1").style.visibility = "visible";
-	document.getElementById("topmenu").style.top = "95px";
+	document.getElementById("topmenu").style.top = "37px";
 	document.getElementById("menu1").textContent = "G/M Jam '20";
 	document.getElementById("menu1").href = "gmj20.html";
 	document.getElementById("menu2").style.padding = "0px"
@@ -88,7 +88,7 @@ function show2020() {
 function show2021() {
 	document.getElementById("newMenu").style.visibility = "visible";
 	document.getElementById("menu1").style.visibility = "visible";
-	document.getElementById("topmenu").style.top = "61px";
+	document.getElementById("topmenu").style.top = "3px";
 	document.getElementById("menu1").textContent = "G/M Jam '21";
 	document.getElementById("menu1").href = "gmj21.html";
 	document.getElementById("menu2").style.padding = "0px"

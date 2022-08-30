@@ -141,10 +141,14 @@
               } else if ((hours / 10) < 1) {
                 hours = "0" + String(hours);
               }
+              if (days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
+                window.location.replace("https://gamemusicjam.org/index_reg");   
+              }
               document.getElementById("days").innerHTML = days;
               document.getElementById("hours").innerHTML = hours;
               document.getElementById("minutes").innerHTML = minutes;
               document.getElementById("seconds").innerHTML = seconds;
+              
             }, 1000);
             </script>
         <header class="masthead" style=" padding-bottom:40px;">
